@@ -1,0 +1,2235 @@
+VERSION 5.00
+Begin VB.PropertyPage ppAppearance
+  Caption = "Appearance"
+  ScaleMode = 1
+  AutoRedraw = False
+  FontTransparent = True
+  ClientLeft = 0
+  ClientTop = 0
+  ClientWidth = 5700
+  ClientHeight = 3255
+  Begin VB.ComboBox cboDateTipFormat
+    Left = 2640
+    Top = 360
+    Width = 2115
+    Height = 315
+    Text = "cboDateTipFormat"
+    TabIndex = 10
+    List = "ppAppearance.frx":0000
+    ItemData = "ppAppearance.frx":0019
+  End
+  Begin VB.CheckBox chkDateTipEnabled
+    Caption = "Date Tip Enabled"
+    Left = 2640
+    Top = 750
+    Width = 2145
+    Height = 225
+    TabIndex = 9
+    Value = 1
+  End
+  Begin VB.ComboBox cboDayFormat
+    Style = 2
+    Left = 180
+    Top = 1740
+    Width = 2115
+    Height = 315
+    TabIndex = 6
+    List = "ppAppearance.frx":0026
+    ItemData = "ppAppearance.frx":003F
+  End
+  Begin VB.ComboBox cboStartOfWeek
+    Style = 2
+    Left = 180
+    Top = 2340
+    Width = 2115
+    Height = 315
+    TabIndex = 5
+  End
+  Begin VB.CheckBox chkDisplayDOW
+    Caption = "Display Days Of Week"
+    Left = 180
+    Top = 2730
+    Width = 2145
+    Height = 225
+    TabIndex = 4
+    Value = 1
+  End
+  Begin VB.ComboBox cboStyle
+    Style = 2
+    Left = 210
+    Top = 360
+    Width = 2085
+    Height = 315
+    TabIndex = 1
+  End
+  Begin VB.ComboBox cboLineStyle
+    Style = 2
+    Left = 210
+    Top = 930
+    Width = 2085
+    Height = 315
+    TabIndex = 0
+  End
+  Begin VB.Label Labels
+    Caption = "Date Tip Format:"
+    Index = 2
+    Left = 2670
+    Top = 150
+    Width = 1185
+    Height = 195
+    TabIndex = 11
+    AutoSize = -1  'True
+    BackStyle = 0 'Transparent
+  End
+  Begin VB.Label Labels
+    Caption = "Day Name Format:"
+    Index = 1
+    Left = 180
+    Top = 1530
+    Width = 1320
+    Height = 195
+    TabIndex = 8
+    AutoSize = -1  'True
+    BackStyle = 0 'Transparent
+  End
+  Begin VB.Label Labels
+    Caption = "Start Of Week:"
+    Index = 0
+    Left = 180
+    Top = 2130
+    Width = 1065
+    Height = 195
+    TabIndex = 7
+    AutoSize = -1  'True
+    BackStyle = 0 'Transparent
+  End
+  Begin VB.Label lblGeneral
+    Caption = "Calendar Style:"
+    Index = 0
+    Left = 210
+    Top = 150
+    Width = 1065
+    Height = 195
+    TabIndex = 3
+    AutoSize = -1  'True
+    BackStyle = 0 'Transparent
+  End
+  Begin VB.Label lblGeneral
+    Caption = "Line Style:"
+    Index = 1
+    Left = 210
+    Top = 720
+    Width = 735
+    Height = 195
+    TabIndex = 2
+    AutoSize = -1  'True
+    BackStyle = 0 'Transparent
+  End
+End
+
+Attribute VB_Name = "ppAppearance"
+
+
+Private Sub Proc_15_0_5FD4C0
+  loc_005FD4C0: push ebp
+  loc_005FD4C1: mov ebp, esp
+  loc_005FD4C3: sub esp, 0000000Ch
+  loc_005FD4C6: push 00412856h ; __vbaExceptHandler
+  loc_005FD4CB: mov eax, fs:[00000000h]
+  loc_005FD4D1: push eax
+  loc_005FD4D2: mov fs:[00000000h], esp
+  loc_005FD4D9: sub esp, 0000000Ch
+  loc_005FD4DC: push ebx
+  loc_005FD4DD: push esi
+  loc_005FD4DE: push edi
+  loc_005FD4DF: mov var_C, esp
+  loc_005FD4E2: mov var_8, 00403F90h
+  loc_005FD4E9: mov esi, Me
+  loc_005FD4EC: mov eax, esi
+  loc_005FD4EE: and eax, 00000001h
+  loc_005FD4F1: mov var_4, eax
+  loc_005FD4F4: and esi, FFFFFFFEh
+  loc_005FD4F7: push esi
+  loc_005FD4F8: mov Me, esi
+  loc_005FD4FB: mov ecx, [esi]
+  loc_005FD4FD: call [ecx+00000004h]
+  loc_005FD500: mov eax, [esi+00000010h]
+  loc_005FD503: push FFFFFFFFh
+  loc_005FD505: push eax
+  loc_005FD506: mov edx, [eax]
+  loc_005FD508: call [edx+000002ACh]
+  loc_005FD50E: test eax, eax
+  loc_005FD510: fnclex
+  loc_005FD512: jge 005FD529h
+  loc_005FD514: mov ecx, [esi+00000010h]
+  loc_005FD517: push 000002ACh
+  loc_005FD51C: push 00447C2Ch
+  loc_005FD521: push ecx
+  loc_005FD522: push eax
+  loc_005FD523: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FD529: mov var_4, 00000000h
+  loc_005FD530: mov eax, Me
+  loc_005FD533: push eax
+  loc_005FD534: mov edx, [eax]
+  loc_005FD536: call [edx+00000008h]
+  loc_005FD539: mov eax, var_4
+  loc_005FD53C: mov ecx, var_14
+  loc_005FD53F: pop edi
+  loc_005FD540: pop esi
+  loc_005FD541: mov fs:[00000000h], ecx
+  loc_005FD548: pop ebx
+  loc_005FD549: mov esp, ebp
+  loc_005FD54B: pop ebp
+  loc_005FD54C: retn 0004h
+End Sub
+
+Private Sub Proc_15_1_5FD550
+  loc_005FD550: push ebp
+  loc_005FD551: mov ebp, esp
+  loc_005FD553: sub esp, 0000000Ch
+  loc_005FD556: push 00412856h ; __vbaExceptHandler
+  loc_005FD55B: mov eax, fs:[00000000h]
+  loc_005FD561: push eax
+  loc_005FD562: mov fs:[00000000h], esp
+  loc_005FD569: sub esp, 0000000Ch
+  loc_005FD56C: push ebx
+  loc_005FD56D: push esi
+  loc_005FD56E: push edi
+  loc_005FD56F: mov var_C, esp
+  loc_005FD572: mov var_8, 00403F98h
+  loc_005FD579: mov esi, Me
+  loc_005FD57C: mov eax, esi
+  loc_005FD57E: and eax, 00000001h
+  loc_005FD581: mov var_4, eax
+  loc_005FD584: and esi, FFFFFFFEh
+  loc_005FD587: push esi
+  loc_005FD588: mov Me, esi
+  loc_005FD58B: mov ecx, [esi]
+  loc_005FD58D: call [ecx+00000004h]
+  loc_005FD590: mov eax, [esi+00000010h]
+  loc_005FD593: push FFFFFFFFh
+  loc_005FD595: push eax
+  loc_005FD596: mov edx, [eax]
+  loc_005FD598: call [edx+000002ACh]
+  loc_005FD59E: test eax, eax
+  loc_005FD5A0: fnclex
+  loc_005FD5A2: jge 005FD5B9h
+  loc_005FD5A4: mov ecx, [esi+00000010h]
+  loc_005FD5A7: push 000002ACh
+  loc_005FD5AC: push 00447C2Ch
+  loc_005FD5B1: push ecx
+  loc_005FD5B2: push eax
+  loc_005FD5B3: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FD5B9: mov var_4, 00000000h
+  loc_005FD5C0: mov eax, Me
+  loc_005FD5C3: push eax
+  loc_005FD5C4: mov edx, [eax]
+  loc_005FD5C6: call [edx+00000008h]
+  loc_005FD5C9: mov eax, var_4
+  loc_005FD5CC: mov ecx, var_14
+  loc_005FD5CF: pop edi
+  loc_005FD5D0: pop esi
+  loc_005FD5D1: mov fs:[00000000h], ecx
+  loc_005FD5D8: pop ebx
+  loc_005FD5D9: mov esp, ebp
+  loc_005FD5DB: pop ebp
+  loc_005FD5DC: retn 0004h
+End Sub
+
+Private Sub Proc_15_2_5FD5E0
+  loc_005FD5E0: push ebp
+  loc_005FD5E1: mov ebp, esp
+  loc_005FD5E3: sub esp, 0000000Ch
+  loc_005FD5E6: push 00412856h ; __vbaExceptHandler
+  loc_005FD5EB: mov eax, fs:[00000000h]
+  loc_005FD5F1: push eax
+  loc_005FD5F2: mov fs:[00000000h], esp
+  loc_005FD5F9: sub esp, 0000000Ch
+  loc_005FD5FC: push ebx
+  loc_005FD5FD: push esi
+  loc_005FD5FE: push edi
+  loc_005FD5FF: mov var_C, esp
+  loc_005FD602: mov var_8, 00403FA0h
+  loc_005FD609: mov esi, Me
+  loc_005FD60C: mov eax, esi
+  loc_005FD60E: and eax, 00000001h
+  loc_005FD611: mov var_4, eax
+  loc_005FD614: and esi, FFFFFFFEh
+  loc_005FD617: push esi
+  loc_005FD618: mov Me, esi
+  loc_005FD61B: mov ecx, [esi]
+  loc_005FD61D: call [ecx+00000004h]
+  loc_005FD620: mov eax, [esi+00000010h]
+  loc_005FD623: push FFFFFFFFh
+  loc_005FD625: push eax
+  loc_005FD626: mov edx, [eax]
+  loc_005FD628: call [edx+000002ACh]
+  loc_005FD62E: test eax, eax
+  loc_005FD630: fnclex
+  loc_005FD632: jge 005FD649h
+  loc_005FD634: mov ecx, [esi+00000010h]
+  loc_005FD637: push 000002ACh
+  loc_005FD63C: push 00447C2Ch
+  loc_005FD641: push ecx
+  loc_005FD642: push eax
+  loc_005FD643: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FD649: mov var_4, 00000000h
+  loc_005FD650: mov eax, Me
+  loc_005FD653: push eax
+  loc_005FD654: mov edx, [eax]
+  loc_005FD656: call [edx+00000008h]
+  loc_005FD659: mov eax, var_4
+  loc_005FD65C: mov ecx, var_14
+  loc_005FD65F: pop edi
+  loc_005FD660: pop esi
+  loc_005FD661: mov fs:[00000000h], ecx
+  loc_005FD668: pop ebx
+  loc_005FD669: mov esp, ebp
+  loc_005FD66B: pop ebp
+  loc_005FD66C: retn 0004h
+End Sub
+
+Private Sub Proc_15_3_5FD670
+  loc_005FD670: push ebp
+  loc_005FD671: mov ebp, esp
+  loc_005FD673: sub esp, 0000000Ch
+  loc_005FD676: push 00412856h ; __vbaExceptHandler
+  loc_005FD67B: mov eax, fs:[00000000h]
+  loc_005FD681: push eax
+  loc_005FD682: mov fs:[00000000h], esp
+  loc_005FD689: sub esp, 0000000Ch
+  loc_005FD68C: push ebx
+  loc_005FD68D: push esi
+  loc_005FD68E: push edi
+  loc_005FD68F: mov var_C, esp
+  loc_005FD692: mov var_8, 00403FA8h
+  loc_005FD699: mov esi, Me
+  loc_005FD69C: mov eax, esi
+  loc_005FD69E: and eax, 00000001h
+  loc_005FD6A1: mov var_4, eax
+  loc_005FD6A4: and esi, FFFFFFFEh
+  loc_005FD6A7: push esi
+  loc_005FD6A8: mov Me, esi
+  loc_005FD6AB: mov ecx, [esi]
+  loc_005FD6AD: call [ecx+00000004h]
+  loc_005FD6B0: mov eax, [esi+00000010h]
+  loc_005FD6B3: push FFFFFFFFh
+  loc_005FD6B5: push eax
+  loc_005FD6B6: mov edx, [eax]
+  loc_005FD6B8: call [edx+000002ACh]
+  loc_005FD6BE: test eax, eax
+  loc_005FD6C0: fnclex
+  loc_005FD6C2: jge 005FD6D9h
+  loc_005FD6C4: mov ecx, [esi+00000010h]
+  loc_005FD6C7: push 000002ACh
+  loc_005FD6CC: push 00447C2Ch
+  loc_005FD6D1: push ecx
+  loc_005FD6D2: push eax
+  loc_005FD6D3: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FD6D9: mov var_4, 00000000h
+  loc_005FD6E0: mov eax, Me
+  loc_005FD6E3: push eax
+  loc_005FD6E4: mov edx, [eax]
+  loc_005FD6E6: call [edx+00000008h]
+  loc_005FD6E9: mov eax, var_4
+  loc_005FD6EC: mov ecx, var_14
+  loc_005FD6EF: pop edi
+  loc_005FD6F0: pop esi
+  loc_005FD6F1: mov fs:[00000000h], ecx
+  loc_005FD6F8: pop ebx
+  loc_005FD6F9: mov esp, ebp
+  loc_005FD6FB: pop ebp
+  loc_005FD6FC: retn 0004h
+End Sub
+
+Private Sub Proc_15_4_5FD700
+  loc_005FD700: push ebp
+  loc_005FD701: mov ebp, esp
+  loc_005FD703: sub esp, 0000000Ch
+  loc_005FD706: push 00412856h ; __vbaExceptHandler
+  loc_005FD70B: mov eax, fs:[00000000h]
+  loc_005FD711: push eax
+  loc_005FD712: mov fs:[00000000h], esp
+  loc_005FD719: sub esp, 0000000Ch
+  loc_005FD71C: push ebx
+  loc_005FD71D: push esi
+  loc_005FD71E: push edi
+  loc_005FD71F: mov var_C, esp
+  loc_005FD722: mov var_8, 00403FB0h
+  loc_005FD729: mov esi, Me
+  loc_005FD72C: mov eax, esi
+  loc_005FD72E: and eax, 00000001h
+  loc_005FD731: mov var_4, eax
+  loc_005FD734: and esi, FFFFFFFEh
+  loc_005FD737: push esi
+  loc_005FD738: mov Me, esi
+  loc_005FD73B: mov ecx, [esi]
+  loc_005FD73D: call [ecx+00000004h]
+  loc_005FD740: mov eax, [esi+00000010h]
+  loc_005FD743: push FFFFFFFFh
+  loc_005FD745: push eax
+  loc_005FD746: mov edx, [eax]
+  loc_005FD748: call [edx+000002ACh]
+  loc_005FD74E: test eax, eax
+  loc_005FD750: fnclex
+  loc_005FD752: jge 005FD769h
+  loc_005FD754: mov ecx, [esi+00000010h]
+  loc_005FD757: push 000002ACh
+  loc_005FD75C: push 00447C2Ch
+  loc_005FD761: push ecx
+  loc_005FD762: push eax
+  loc_005FD763: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FD769: mov var_4, 00000000h
+  loc_005FD770: mov eax, Me
+  loc_005FD773: push eax
+  loc_005FD774: mov edx, [eax]
+  loc_005FD776: call [edx+00000008h]
+  loc_005FD779: mov eax, var_4
+  loc_005FD77C: mov ecx, var_14
+  loc_005FD77F: pop edi
+  loc_005FD780: pop esi
+  loc_005FD781: mov fs:[00000000h], ecx
+  loc_005FD788: pop ebx
+  loc_005FD789: mov esp, ebp
+  loc_005FD78B: pop ebp
+  loc_005FD78C: retn 0004h
+End Sub
+
+Private Sub Proc_15_5_5FD790
+  loc_005FD790: push ebp
+  loc_005FD791: mov ebp, esp
+  loc_005FD793: sub esp, 0000000Ch
+  loc_005FD796: push 00412856h ; __vbaExceptHandler
+  loc_005FD79B: mov eax, fs:[00000000h]
+  loc_005FD7A1: push eax
+  loc_005FD7A2: mov fs:[00000000h], esp
+  loc_005FD7A9: sub esp, 0000004Ch
+  loc_005FD7AC: push ebx
+  loc_005FD7AD: push esi
+  loc_005FD7AE: push edi
+  loc_005FD7AF: mov var_C, esp
+  loc_005FD7B2: mov var_8, 00403FB8h
+  loc_005FD7B9: mov esi, Me
+  loc_005FD7BC: mov eax, esi
+  loc_005FD7BE: and eax, 00000001h
+  loc_005FD7C1: mov var_4, eax
+  loc_005FD7C4: and esi, FFFFFFFEh
+  loc_005FD7C7: push esi
+  loc_005FD7C8: mov Me, esi
+  loc_005FD7CB: mov ecx, [esi]
+  loc_005FD7CD: call [ecx+00000004h]
+  loc_005FD7D0: mov eax, [esi+00000010h]
+  loc_005FD7D3: xor ebx, ebx
+  loc_005FD7D5: lea ecx, var_24
+  loc_005FD7D8: mov var_18, ebx
+  loc_005FD7DB: mov var_1C, ebx
+  loc_005FD7DE: mov var_20, ebx
+  loc_005FD7E1: mov var_24, ebx
+  loc_005FD7E4: mov var_28, ebx
+  loc_005FD7E7: mov var_2C, ebx
+  loc_005FD7EA: mov var_30, ebx
+  loc_005FD7ED: mov edx, [eax]
+  loc_005FD7EF: push ecx
+  loc_005FD7F0: push eax
+  loc_005FD7F1: call [edx+000002A0h]
+  loc_005FD7F7: cmp eax, ebx
+  loc_005FD7F9: fnclex
+  loc_005FD7FB: jge 005FD816h
+  loc_005FD7FD: mov edx, [esi+00000010h]
+  loc_005FD800: mov edi, [004010CCh] ; __vbaHresultCheckObj
+  loc_005FD806: push 000002A0h
+  loc_005FD80B: push 00447C2Ch
+  loc_005FD810: push edx
+  loc_005FD811: push eax
+  loc_005FD812: call edi
+  loc_005FD814: jmp 005FD81Ch
+  loc_005FD816: mov edi, [004010CCh] ; __vbaHresultCheckObj
+  loc_005FD81C: mov eax, var_24
+  loc_005FD81F: lea edx, var_30
+  loc_005FD822: push edx
+  loc_005FD823: push eax
+  loc_005FD824: mov ecx, [eax]
+  loc_005FD826: mov var_38, eax
+  loc_005FD829: call [ecx+0000001Ch]
+  loc_005FD82C: cmp eax, ebx
+  loc_005FD82E: fnclex
+  loc_005FD830: jge 005FD840h
+  loc_005FD832: mov ecx, var_38
+  loc_005FD835: push 0000001Ch
+  loc_005FD837: push 00447D30h
+  loc_005FD83C: push ecx
+  loc_005FD83D: push eax
+  loc_005FD83E: call edi
+  loc_005FD840: mov eax, var_30
+  loc_005FD843: xor edx, edx
+  loc_005FD845: cmp eax, ebx
+  loc_005FD847: lea ecx, var_24
+  loc_005FD84A: setz dl
+  loc_005FD84D: neg edx
+  loc_005FD84F: mov var_40, edx
+  loc_005FD852: call [0040142Ch] ; __vbaFreeObj
+  loc_005FD858: cmp var_40, bx
+  loc_005FD85C: jnz 005FDC5Bh
+  loc_005FD862: mov eax, [esi+00000010h]
+  loc_005FD865: lea edx, var_24
+  loc_005FD868: push edx
+  loc_005FD869: push eax
+  loc_005FD86A: mov ecx, [eax]
+  loc_005FD86C: call [ecx+000002A0h]
+  loc_005FD872: cmp eax, ebx
+  loc_005FD874: fnclex
+  loc_005FD876: jge 005FD889h
+  loc_005FD878: mov ecx, [esi+00000010h]
+  loc_005FD87B: push 000002A0h
+  loc_005FD880: push 00447C2Ch
+  loc_005FD885: push ecx
+  loc_005FD886: push eax
+  loc_005FD887: call edi
+  loc_005FD889: mov eax, var_24
+  loc_005FD88C: lea ecx, var_28
+  loc_005FD88F: push ecx
+  loc_005FD890: push 00000000h
+  loc_005FD892: mov edx, [eax]
+  loc_005FD894: push eax
+  loc_005FD895: mov ebx, eax
+  loc_005FD897: call [edx+00000020h]
+  loc_005FD89A: test eax, eax
+  loc_005FD89C: fnclex
+  loc_005FD89E: jge 005FD8ABh
+  loc_005FD8A0: push 00000020h
+  loc_005FD8A2: push 00447D30h
+  loc_005FD8A7: push ebx
+  loc_005FD8A8: push eax
+  loc_005FD8A9: call edi
+  loc_005FD8AB: mov edx, var_28
+  loc_005FD8AE: push 00446644h
+  loc_005FD8B3: push edx
+  loc_005FD8B4: call [004013C4h] ; __vbaCastObj
+  loc_005FD8BA: mov ebx, [00401128h] ; __vbaObjSet
+  loc_005FD8C0: push eax
+  loc_005FD8C1: lea eax, var_1C
+  loc_005FD8C4: push eax
+  loc_005FD8C5: call ebx
+  loc_005FD8C7: lea ecx, var_28
+  loc_005FD8CA: lea edx, var_24
+  loc_005FD8CD: push ecx
+  loc_005FD8CE: push edx
+  loc_005FD8CF: push 00000002h
+  loc_005FD8D1: call [00401068h] ; __vbaFreeObjList
+  loc_005FD8D7: mov eax, [esi]
+  loc_005FD8D9: add esp, 0000000Ch
+  loc_005FD8DC: push esi
+  loc_005FD8DD: call [eax+0000072Ch]
+  loc_005FD8E3: mov ecx, [esi]
+  loc_005FD8E5: push esi
+  loc_005FD8E6: call [ecx+00000730h]
+  loc_005FD8EC: mov edx, [esi]
+  loc_005FD8EE: push esi
+  loc_005FD8EF: call [edx+00000734h]
+  loc_005FD8F5: mov eax, [esi]
+  loc_005FD8F7: push esi
+  loc_005FD8F8: call [eax+00000740h]
+  loc_005FD8FE: mov ecx, [esi]
+  loc_005FD900: push esi
+  loc_005FD901: call [ecx+0000031Ch]
+  loc_005FD907: lea edx, var_24
+  loc_005FD90A: push eax
+  loc_005FD90B: push edx
+  loc_005FD90C: call ebx
+  loc_005FD90E: mov ebx, eax
+  loc_005FD910: mov eax, var_1C
+  loc_005FD913: lea edx, var_30
+  loc_005FD916: mov var_38, ebx
+  loc_005FD919: mov ecx, [eax]
+  loc_005FD91B: push edx
+  loc_005FD91C: push eax
+  loc_005FD91D: call [ecx+000008A8h]
+  loc_005FD923: test eax, eax
+  loc_005FD925: fnclex
+  loc_005FD927: jge 005FD93Ah
+  loc_005FD929: mov ecx, var_1C
+  loc_005FD92C: push 000008A8h
+  loc_005FD931: push 00446644h
+  loc_005FD936: push ecx
+  loc_005FD937: push eax
+  loc_005FD938: call edi
+  loc_005FD93A: mov ecx, var_30
+  loc_005FD93D: mov ebx, [ebx]
+  loc_005FD93F: call [004011E4h] ; __vbaI2I4
+  loc_005FD945: mov edx, ebx
+  loc_005FD947: mov ebx, var_38
+  loc_005FD94A: push eax
+  loc_005FD94B: push ebx
+  loc_005FD94C: call [edx+000000F4h]
+  loc_005FD952: test eax, eax
+  loc_005FD954: fnclex
+  loc_005FD956: jge 005FD966h
+  loc_005FD958: push 000000F4h
+  loc_005FD95D: push 00446E04h
+  loc_005FD962: push ebx
+  loc_005FD963: push eax
+  loc_005FD964: call edi
+  loc_005FD966: lea ecx, var_24
+  loc_005FD969: call [0040142Ch] ; __vbaFreeObj
+  loc_005FD96F: mov eax, [esi]
+  loc_005FD971: push esi
+  loc_005FD972: call [eax+00000320h]
+  loc_005FD978: lea ecx, var_24
+  loc_005FD97B: push eax
+  loc_005FD97C: push ecx
+  loc_005FD97D: call [00401128h] ; __vbaObjSet
+  loc_005FD983: mov ebx, eax
+  loc_005FD985: mov eax, var_1C
+  loc_005FD988: lea ecx, var_30
+  loc_005FD98B: mov var_38, ebx
+  loc_005FD98E: mov edx, [eax]
+  loc_005FD990: push ecx
+  loc_005FD991: push eax
+  loc_005FD992: call [edx+00000844h]
+  loc_005FD998: test eax, eax
+  loc_005FD99A: fnclex
+  loc_005FD99C: jge 005FD9AFh
+  loc_005FD99E: mov edx, var_1C
+  loc_005FD9A1: push 00000844h
+  loc_005FD9A6: push 00446644h
+  loc_005FD9AB: push edx
+  loc_005FD9AC: push eax
+  loc_005FD9AD: call edi
+  loc_005FD9AF: mov ecx, var_30
+  loc_005FD9B2: mov ebx, [ebx]
+  loc_005FD9B4: call [004011E4h] ; __vbaI2I4
+  loc_005FD9BA: mov var_50, ebx
+  loc_005FD9BD: mov ebx, var_38
+  loc_005FD9C0: push eax
+  loc_005FD9C1: mov eax, var_50
+  loc_005FD9C4: push ebx
+  loc_005FD9C5: call [eax+000000F4h]
+  loc_005FD9CB: test eax, eax
+  loc_005FD9CD: fnclex
+  loc_005FD9CF: jge 005FD9DFh
+  loc_005FD9D1: push 000000F4h
+  loc_005FD9D6: push 00446E04h
+  loc_005FD9DB: push ebx
+  loc_005FD9DC: push eax
+  loc_005FD9DD: call edi
+  loc_005FD9DF: lea ecx, var_24
+  loc_005FD9E2: call [0040142Ch] ; __vbaFreeObj
+  loc_005FD9E8: mov ecx, [esi]
+  loc_005FD9EA: push esi
+  loc_005FD9EB: call [ecx+00000328h]
+  loc_005FD9F1: lea edx, var_24
+  loc_005FD9F4: push eax
+  loc_005FD9F5: push edx
+  loc_005FD9F6: call [00401128h] ; __vbaObjSet
+  loc_005FD9FC: mov ebx, eax
+  loc_005FD9FE: mov eax, var_1C
+  loc_005FDA01: lea edx, var_30
+  loc_005FDA04: mov var_38, ebx
+  loc_005FDA07: mov ecx, [eax]
+  loc_005FDA09: push edx
+  loc_005FDA0A: push eax
+  loc_005FDA0B: call [ecx+000007B4h]
+  loc_005FDA11: test eax, eax
+  loc_005FDA13: fnclex
+  loc_005FDA15: jge 005FDA28h
+  loc_005FDA17: mov ecx, var_1C
+  loc_005FDA1A: push 000007B4h
+  loc_005FDA1F: push 00446644h
+  loc_005FDA24: push ecx
+  loc_005FDA25: push eax
+  loc_005FDA26: call edi
+  loc_005FDA28: mov ecx, var_30
+  loc_005FDA2B: mov ebx, [ebx]
+  loc_005FDA2D: call [004011E4h] ; __vbaI2I4
+  loc_005FDA33: mov edx, ebx
+  loc_005FDA35: mov ebx, var_38
+  loc_005FDA38: push eax
+  loc_005FDA39: push ebx
+  loc_005FDA3A: call [edx+000000F4h]
+  loc_005FDA40: test eax, eax
+  loc_005FDA42: fnclex
+  loc_005FDA44: jge 005FDA54h
+  loc_005FDA46: push 000000F4h
+  loc_005FDA4B: push 00446E04h
+  loc_005FDA50: push ebx
+  loc_005FDA51: push eax
+  loc_005FDA52: call edi
+  loc_005FDA54: lea ecx, var_24
+  loc_005FDA57: call [0040142Ch] ; __vbaFreeObj
+  loc_005FDA5D: mov eax, [esi]
+  loc_005FDA5F: push esi
+  loc_005FDA60: call [eax+0000032Ch]
+  loc_005FDA66: lea ecx, var_24
+  loc_005FDA69: push eax
+  loc_005FDA6A: push ecx
+  loc_005FDA6B: call [00401128h] ; __vbaObjSet
+  loc_005FDA71: mov ebx, eax
+  loc_005FDA73: mov eax, var_1C
+  loc_005FDA76: lea ecx, var_30
+  loc_005FDA79: mov var_38, ebx
+  loc_005FDA7C: mov edx, [eax]
+  loc_005FDA7E: push ecx
+  loc_005FDA7F: push eax
+  loc_005FDA80: call [edx+0000084Ch]
+  loc_005FDA86: test eax, eax
+  loc_005FDA88: fnclex
+  loc_005FDA8A: jge 005FDA9Dh
+  loc_005FDA8C: mov edx, var_1C
+  loc_005FDA8F: push 0000084Ch
+  loc_005FDA94: push 00446644h
+  loc_005FDA99: push edx
+  loc_005FDA9A: push eax
+  loc_005FDA9B: call edi
+  loc_005FDA9D: mov ecx, var_30
+  loc_005FDAA0: mov ebx, [ebx]
+  loc_005FDAA2: call [004011E4h] ; __vbaI2I4
+  loc_005FDAA8: mov var_58, ebx
+  loc_005FDAAB: mov ebx, var_38
+  loc_005FDAAE: push eax
+  loc_005FDAAF: mov eax, var_58
+  loc_005FDAB2: push ebx
+  loc_005FDAB3: call [eax+000000F4h]
+  loc_005FDAB9: test eax, eax
+  loc_005FDABB: fnclex
+  loc_005FDABD: jge 005FDACDh
+  loc_005FDABF: push 000000F4h
+  loc_005FDAC4: push 00446E04h
+  loc_005FDAC9: push ebx
+  loc_005FDACA: push eax
+  loc_005FDACB: call edi
+  loc_005FDACD: lea ecx, var_24
+  loc_005FDAD0: call [0040142Ch] ; __vbaFreeObj
+  loc_005FDAD6: mov ecx, [esi]
+  loc_005FDAD8: push esi
+  loc_005FDAD9: call [ecx+00000324h]
+  loc_005FDADF: lea edx, var_24
+  loc_005FDAE2: push eax
+  loc_005FDAE3: push edx
+  loc_005FDAE4: call [00401128h] ; __vbaObjSet
+  loc_005FDAEA: mov ebx, eax
+  loc_005FDAEC: mov eax, var_1C
+  loc_005FDAEF: lea edx, var_2C
+  loc_005FDAF2: mov var_38, ebx
+  loc_005FDAF5: mov ecx, [eax]
+  loc_005FDAF7: push edx
+  loc_005FDAF8: push eax
+  loc_005FDAF9: call [ecx+000007C4h]
+  loc_005FDAFF: test eax, eax
+  loc_005FDB01: fnclex
+  loc_005FDB03: jge 005FDB16h
+  loc_005FDB05: mov ecx, var_1C
+  loc_005FDB08: push 000007C4h
+  loc_005FDB0D: push 00446644h
+  loc_005FDB12: push ecx
+  loc_005FDB13: push eax
+  loc_005FDB14: call edi
+  loc_005FDB16: mov ecx, var_2C
+  loc_005FDB19: mov ebx, [ebx]
+  loc_005FDB1B: call [0040108Ch] ; __vbaI2Abs
+  loc_005FDB21: mov edx, ebx
+  loc_005FDB23: mov ebx, var_38
+  loc_005FDB26: push eax
+  loc_005FDB27: push ebx
+  loc_005FDB28: call [edx+000000E4h]
+  loc_005FDB2E: test eax, eax
+  loc_005FDB30: fnclex
+  loc_005FDB32: jge 005FDB42h
+  loc_005FDB34: push 000000E4h
+  loc_005FDB39: push 00446678h
+  loc_005FDB3E: push ebx
+  loc_005FDB3F: push eax
+  loc_005FDB40: call edi
+  loc_005FDB42: lea ecx, var_24
+  loc_005FDB45: call [0040142Ch] ; __vbaFreeObj
+  loc_005FDB4B: mov eax, [esi]
+  loc_005FDB4D: push esi
+  loc_005FDB4E: call [eax+00000318h]
+  loc_005FDB54: lea ecx, var_24
+  loc_005FDB57: push eax
+  loc_005FDB58: push ecx
+  loc_005FDB59: call [00401128h] ; __vbaObjSet
+  loc_005FDB5F: mov ebx, eax
+  loc_005FDB61: mov eax, var_1C
+  loc_005FDB64: lea ecx, var_2C
+  loc_005FDB67: mov var_38, ebx
+  loc_005FDB6A: mov edx, [eax]
+  loc_005FDB6C: push ecx
+  loc_005FDB6D: push eax
+  loc_005FDB6E: call [edx+0000082Ch]
+  loc_005FDB74: test eax, eax
+  loc_005FDB76: fnclex
+  loc_005FDB78: jge 005FDB8Bh
+  loc_005FDB7A: mov edx, var_1C
+  loc_005FDB7D: push 0000082Ch
+  loc_005FDB82: push 00446644h
+  loc_005FDB87: push edx
+  loc_005FDB88: push eax
+  loc_005FDB89: call edi
+  loc_005FDB8B: mov ecx, var_2C
+  loc_005FDB8E: mov ebx, [ebx]
+  loc_005FDB90: call [0040108Ch] ; __vbaI2Abs
+  loc_005FDB96: mov var_60, ebx
+  loc_005FDB99: mov ebx, var_38
+  loc_005FDB9C: push eax
+  loc_005FDB9D: mov eax, var_60
+  loc_005FDBA0: push ebx
+  loc_005FDBA1: call [eax+000000E4h]
+  loc_005FDBA7: test eax, eax
+  loc_005FDBA9: fnclex
+  loc_005FDBAB: jge 005FDBBBh
+  loc_005FDBAD: push 000000E4h
+  loc_005FDBB2: push 00446678h
+  loc_005FDBB7: push ebx
+  loc_005FDBB8: push eax
+  loc_005FDBB9: call edi
+  loc_005FDBBB: lea ecx, var_24
+  loc_005FDBBE: call [0040142Ch] ; __vbaFreeObj
+  loc_005FDBC4: mov ecx, [esi]
+  loc_005FDBC6: push esi
+  loc_005FDBC7: call [ecx+00000314h]
+  loc_005FDBCD: lea edx, var_24
+  loc_005FDBD0: push eax
+  loc_005FDBD1: push edx
+  loc_005FDBD2: call [00401128h] ; __vbaObjSet
+  loc_005FDBD8: mov ebx, eax
+  loc_005FDBDA: mov eax, var_1C
+  loc_005FDBDD: lea edx, var_20
+  loc_005FDBE0: mov ecx, [eax]
+  loc_005FDBE2: push edx
+  loc_005FDBE3: push eax
+  loc_005FDBE4: call [ecx+00000898h]
+  loc_005FDBEA: test eax, eax
+  loc_005FDBEC: fnclex
+  loc_005FDBEE: jge 005FDC01h
+  loc_005FDBF0: mov ecx, var_1C
+  loc_005FDBF3: push 00000898h
+  loc_005FDBF8: push 00446644h
+  loc_005FDBFD: push ecx
+  loc_005FDBFE: push eax
+  loc_005FDBFF: call edi
+  loc_005FDC01: mov eax, var_20
+  loc_005FDC04: mov edx, [ebx]
+  loc_005FDC06: push eax
+  loc_005FDC07: push ebx
+  loc_005FDC08: call [edx+000000ACh]
+  loc_005FDC0E: test eax, eax
+  loc_005FDC10: fnclex
+  loc_005FDC12: jge 005FDC22h
+  loc_005FDC14: push 000000ACh
+  loc_005FDC19: push 00446E04h
+  loc_005FDC1E: push ebx
+  loc_005FDC1F: push eax
+  loc_005FDC20: call edi
+  loc_005FDC22: lea ecx, var_20
+  loc_005FDC25: call [00401430h] ; __vbaFreeStr
+  loc_005FDC2B: lea ecx, var_24
+  loc_005FDC2E: call [0040142Ch] ; __vbaFreeObj
+  loc_005FDC34: mov eax, [esi+00000010h]
+  loc_005FDC37: push 00000000h
+  loc_005FDC39: push eax
+  loc_005FDC3A: mov ecx, [eax]
+  loc_005FDC3C: call [ecx+000002ACh]
+  loc_005FDC42: test eax, eax
+  loc_005FDC44: fnclex
+  loc_005FDC46: jge 005FDC59h
+  loc_005FDC48: mov edx, [esi+00000010h]
+  loc_005FDC4B: push 000002ACh
+  loc_005FDC50: push 00447C2Ch
+  loc_005FDC55: push edx
+  loc_005FDC56: push eax
+  loc_005FDC57: call edi
+  loc_005FDC59: xor ebx, ebx
+  loc_005FDC5B: mov var_4, ebx
+  loc_005FDC5E: push 005FDC93h
+  loc_005FDC63: jmp 005FDC82h
+  loc_005FDC65: lea ecx, var_20
+  loc_005FDC68: call [00401430h] ; __vbaFreeStr
+  loc_005FDC6E: lea eax, var_28
+  loc_005FDC71: lea ecx, var_24
+  loc_005FDC74: push eax
+  loc_005FDC75: push ecx
+  loc_005FDC76: push 00000002h
+  loc_005FDC78: call [00401068h] ; __vbaFreeObjList
+  loc_005FDC7E: add esp, 0000000Ch
+  loc_005FDC81: ret
+  loc_005FDC82: mov esi, [0040142Ch] ; __vbaFreeObj
+  loc_005FDC88: lea ecx, var_18
+  loc_005FDC8B: call __vbaFreeObj
+  loc_005FDC8D: lea ecx, var_1C
+  loc_005FDC90: call __vbaFreeObj
+  loc_005FDC92: ret
+  loc_005FDC93: mov eax, Me
+  loc_005FDC96: push eax
+  loc_005FDC97: mov edx, [eax]
+  loc_005FDC99: call [edx+00000008h]
+  loc_005FDC9C: mov eax, var_4
+  loc_005FDC9F: mov ecx, var_14
+  loc_005FDCA2: pop edi
+  loc_005FDCA3: pop esi
+  loc_005FDCA4: mov fs:[00000000h], ecx
+  loc_005FDCAB: pop ebx
+  loc_005FDCAC: mov esp, ebp
+  loc_005FDCAE: pop ebp
+  loc_005FDCAF: retn 0004h
+End Sub
+
+Private Sub Proc_15_6_5FDCC0
+  loc_005FDCC0: push ebp
+  loc_005FDCC1: mov ebp, esp
+  loc_005FDCC3: sub esp, 0000000Ch
+  loc_005FDCC6: push 00412856h ; __vbaExceptHandler
+  loc_005FDCCB: mov eax, fs:[00000000h]
+  loc_005FDCD1: push eax
+  loc_005FDCD2: mov fs:[00000000h], esp
+  loc_005FDCD9: sub esp, 00000028h
+  loc_005FDCDC: push ebx
+  loc_005FDCDD: push esi
+  loc_005FDCDE: push edi
+  loc_005FDCDF: mov var_C, esp
+  loc_005FDCE2: mov var_8, 00403FC8h
+  loc_005FDCE9: mov esi, Me
+  loc_005FDCEC: mov eax, esi
+  loc_005FDCEE: and eax, 00000001h
+  loc_005FDCF1: mov var_4, eax
+  loc_005FDCF4: and esi, FFFFFFFEh
+  loc_005FDCF7: push esi
+  loc_005FDCF8: mov Me, esi
+  loc_005FDCFB: mov ecx, [esi]
+  loc_005FDCFD: call [ecx+00000004h]
+  loc_005FDD00: mov eax, [esi+00000010h]
+  loc_005FDD03: xor ebx, ebx
+  loc_005FDD05: lea ecx, var_20
+  loc_005FDD08: mov var_18, ebx
+  loc_005FDD0B: mov var_1C, ebx
+  loc_005FDD0E: mov var_20, ebx
+  loc_005FDD11: mov var_24, ebx
+  loc_005FDD14: mov var_28, ebx
+  loc_005FDD17: mov edx, [eax]
+  loc_005FDD19: push ecx
+  loc_005FDD1A: push eax
+  loc_005FDD1B: call [edx+000002A0h]
+  loc_005FDD21: cmp eax, ebx
+  loc_005FDD23: fnclex
+  loc_005FDD25: jge 005FDD40h
+  loc_005FDD27: mov edx, [esi+00000010h]
+  loc_005FDD2A: mov edi, [004010CCh] ; __vbaHresultCheckObj
+  loc_005FDD30: push 000002A0h
+  loc_005FDD35: push 00447C2Ch
+  loc_005FDD3A: push edx
+  loc_005FDD3B: push eax
+  loc_005FDD3C: call edi
+  loc_005FDD3E: jmp 005FDD46h
+  loc_005FDD40: mov edi, [004010CCh] ; __vbaHresultCheckObj
+  loc_005FDD46: mov eax, var_20
+  loc_005FDD49: lea edx, var_24
+  loc_005FDD4C: push edx
+  loc_005FDD4D: push ebx
+  loc_005FDD4E: mov ecx, [eax]
+  loc_005FDD50: push eax
+  loc_005FDD51: mov var_30, eax
+  loc_005FDD54: call [ecx+00000020h]
+  loc_005FDD57: cmp eax, ebx
+  loc_005FDD59: fnclex
+  loc_005FDD5B: jge 005FDD6Bh
+  loc_005FDD5D: mov ecx, var_30
+  loc_005FDD60: push 00000020h
+  loc_005FDD62: push 00447D30h
+  loc_005FDD67: push ecx
+  loc_005FDD68: push eax
+  loc_005FDD69: call edi
+  loc_005FDD6B: mov edx, var_24
+  loc_005FDD6E: push 00446644h
+  loc_005FDD73: push edx
+  loc_005FDD74: call [004013C4h] ; __vbaCastObj
+  loc_005FDD7A: mov ebx, [00401128h] ; __vbaObjSet
+  loc_005FDD80: push eax
+  loc_005FDD81: lea eax, var_18
+  loc_005FDD84: push eax
+  loc_005FDD85: call ebx
+  loc_005FDD87: lea ecx, var_24
+  loc_005FDD8A: lea edx, var_20
+  loc_005FDD8D: push ecx
+  loc_005FDD8E: push edx
+  loc_005FDD8F: push 00000002h
+  loc_005FDD91: call [00401068h] ; __vbaFreeObjList
+  loc_005FDD97: mov eax, [esi]
+  loc_005FDD99: add esp, 0000000Ch
+  loc_005FDD9C: push esi
+  loc_005FDD9D: call [eax+00000324h]
+  loc_005FDDA3: lea ecx, var_20
+  loc_005FDDA6: push eax
+  loc_005FDDA7: push ecx
+  loc_005FDDA8: call ebx
+  loc_005FDDAA: mov ebx, eax
+  loc_005FDDAC: lea eax, var_28
+  loc_005FDDAF: push eax
+  loc_005FDDB0: push ebx
+  loc_005FDDB1: mov edx, [ebx]
+  loc_005FDDB3: call [edx+00000138h]
+  loc_005FDDB9: test eax, eax
+  loc_005FDDBB: fnclex
+  loc_005FDDBD: jge 005FDDCDh
+  loc_005FDDBF: push 00000138h
+  loc_005FDDC4: push 00446678h
+  loc_005FDDC9: push ebx
+  loc_005FDDCA: push eax
+  loc_005FDDCB: call edi
+  loc_005FDDCD: mov bx, var_28
+  loc_005FDDD1: lea ecx, var_20
+  loc_005FDDD4: call [0040142Ch] ; __vbaFreeObj
+  loc_005FDDDA: test bx, bx
+  loc_005FDDDD: jz 005FDE4Eh
+  loc_005FDDDF: mov ecx, [esi]
+  loc_005FDDE1: push esi
+  loc_005FDDE2: call [ecx+00000324h]
+  loc_005FDDE8: lea edx, var_20
+  loc_005FDDEB: push eax
+  loc_005FDDEC: push edx
+  loc_005FDDED: call [00401128h] ; __vbaObjSet
+  loc_005FDDF3: mov ebx, eax
+  loc_005FDDF5: lea ecx, var_28
+  loc_005FDDF8: push ecx
+  loc_005FDDF9: push ebx
+  loc_005FDDFA: mov eax, [ebx]
+  loc_005FDDFC: call [eax+000000E0h]
+  loc_005FDE02: test eax, eax
+  loc_005FDE04: fnclex
+  loc_005FDE06: jge 005FDE16h
+  loc_005FDE08: push 000000E0h
+  loc_005FDE0D: push 00446678h
+  loc_005FDE12: push ebx
+  loc_005FDE13: push eax
+  loc_005FDE14: call edi
+  loc_005FDE16: mov eax, var_18
+  loc_005FDE19: xor ecx, ecx
+  loc_005FDE1B: cmp var_28, cx
+  loc_005FDE1F: mov edx, [eax]
+  loc_005FDE21: setnz cl
+  loc_005FDE24: neg ecx
+  loc_005FDE26: push ecx
+  loc_005FDE27: push eax
+  loc_005FDE28: call [edx+000007C8h]
+  loc_005FDE2E: test eax, eax
+  loc_005FDE30: fnclex
+  loc_005FDE32: jge 005FDE45h
+  loc_005FDE34: mov edx, var_18
+  loc_005FDE37: push 000007C8h
+  loc_005FDE3C: push 00446644h
+  loc_005FDE41: push edx
+  loc_005FDE42: push eax
+  loc_005FDE43: call edi
+  loc_005FDE45: lea ecx, var_20
+  loc_005FDE48: call [0040142Ch] ; __vbaFreeObj
+  loc_005FDE4E: mov eax, [esi]
+  loc_005FDE50: push esi
+  loc_005FDE51: call [eax+00000318h]
+  loc_005FDE57: lea ecx, var_20
+  loc_005FDE5A: push eax
+  loc_005FDE5B: push ecx
+  loc_005FDE5C: call [00401128h] ; __vbaObjSet
+  loc_005FDE62: mov ebx, eax
+  loc_005FDE64: lea eax, var_28
+  loc_005FDE67: push eax
+  loc_005FDE68: push ebx
+  loc_005FDE69: mov edx, [ebx]
+  loc_005FDE6B: call [edx+00000138h]
+  loc_005FDE71: test eax, eax
+  loc_005FDE73: fnclex
+  loc_005FDE75: jge 005FDE85h
+  loc_005FDE77: push 00000138h
+  loc_005FDE7C: push 00446678h
+  loc_005FDE81: push ebx
+  loc_005FDE82: push eax
+  loc_005FDE83: call edi
+  loc_005FDE85: mov bx, var_28
+  loc_005FDE89: lea ecx, var_20
+  loc_005FDE8C: call [0040142Ch] ; __vbaFreeObj
+  loc_005FDE92: test bx, bx
+  loc_005FDE95: jz 005FDF06h
+  loc_005FDE97: mov ecx, [esi]
+  loc_005FDE99: push esi
+  loc_005FDE9A: call [ecx+00000318h]
+  loc_005FDEA0: lea edx, var_20
+  loc_005FDEA3: push eax
+  loc_005FDEA4: push edx
+  loc_005FDEA5: call [00401128h] ; __vbaObjSet
+  loc_005FDEAB: mov ebx, eax
+  loc_005FDEAD: lea ecx, var_28
+  loc_005FDEB0: push ecx
+  loc_005FDEB1: push ebx
+  loc_005FDEB2: mov eax, [ebx]
+  loc_005FDEB4: call [eax+000000E0h]
+  loc_005FDEBA: test eax, eax
+  loc_005FDEBC: fnclex
+  loc_005FDEBE: jge 005FDECEh
+  loc_005FDEC0: push 000000E0h
+  loc_005FDEC5: push 00446678h
+  loc_005FDECA: push ebx
+  loc_005FDECB: push eax
+  loc_005FDECC: call edi
+  loc_005FDECE: mov eax, var_18
+  loc_005FDED1: xor ecx, ecx
+  loc_005FDED3: cmp var_28, cx
+  loc_005FDED7: mov edx, [eax]
+  loc_005FDED9: setnz cl
+  loc_005FDEDC: neg ecx
+  loc_005FDEDE: push ecx
+  loc_005FDEDF: push eax
+  loc_005FDEE0: call [edx+00000830h]
+  loc_005FDEE6: test eax, eax
+  loc_005FDEE8: fnclex
+  loc_005FDEEA: jge 005FDEFDh
+  loc_005FDEEC: mov edx, var_18
+  loc_005FDEEF: push 00000830h
+  loc_005FDEF4: push 00446644h
+  loc_005FDEF9: push edx
+  loc_005FDEFA: push eax
+  loc_005FDEFB: call edi
+  loc_005FDEFD: lea ecx, var_20
+  loc_005FDF00: call [0040142Ch] ; __vbaFreeObj
+  loc_005FDF06: mov eax, [esi]
+  loc_005FDF08: push esi
+  loc_005FDF09: call [eax+00000314h]
+  loc_005FDF0F: lea ecx, var_20
+  loc_005FDF12: push eax
+  loc_005FDF13: push ecx
+  loc_005FDF14: call [00401128h] ; __vbaObjSet
+  loc_005FDF1A: mov ebx, eax
+  loc_005FDF1C: lea eax, var_28
+  loc_005FDF1F: push eax
+  loc_005FDF20: push ebx
+  loc_005FDF21: mov edx, [ebx]
+  loc_005FDF23: call [edx+00000190h]
+  loc_005FDF29: test eax, eax
+  loc_005FDF2B: fnclex
+  loc_005FDF2D: jge 005FDF3Dh
+  loc_005FDF2F: push 00000190h
+  loc_005FDF34: push 00446E04h
+  loc_005FDF39: push ebx
+  loc_005FDF3A: push eax
+  loc_005FDF3B: call edi
+  loc_005FDF3D: mov bx, var_28
+  loc_005FDF41: lea ecx, var_20
+  loc_005FDF44: call [0040142Ch] ; __vbaFreeObj
+  loc_005FDF4A: test bx, bx
+  loc_005FDF4D: jz 005FDFBFh
+  loc_005FDF4F: mov ecx, [esi]
+  loc_005FDF51: push esi
+  loc_005FDF52: call [ecx+00000314h]
+  loc_005FDF58: lea edx, var_20
+  loc_005FDF5B: push eax
+  loc_005FDF5C: push edx
+  loc_005FDF5D: call [00401128h] ; __vbaObjSet
+  loc_005FDF63: mov ebx, eax
+  loc_005FDF65: lea ecx, var_1C
+  loc_005FDF68: push ecx
+  loc_005FDF69: push ebx
+  loc_005FDF6A: mov eax, [ebx]
+  loc_005FDF6C: call [eax+000000A8h]
+  loc_005FDF72: test eax, eax
+  loc_005FDF74: fnclex
+  loc_005FDF76: jge 005FDF86h
+  loc_005FDF78: push 000000A8h
+  loc_005FDF7D: push 00446E04h
+  loc_005FDF82: push ebx
+  loc_005FDF83: push eax
+  loc_005FDF84: call edi
+  loc_005FDF86: mov eax, var_18
+  loc_005FDF89: mov ecx, var_1C
+  loc_005FDF8C: push ecx
+  loc_005FDF8D: push eax
+  loc_005FDF8E: mov edx, [eax]
+  loc_005FDF90: call [edx+0000089Ch]
+  loc_005FDF96: test eax, eax
+  loc_005FDF98: fnclex
+  loc_005FDF9A: jge 005FDFADh
+  loc_005FDF9C: mov edx, var_18
+  loc_005FDF9F: push 0000089Ch
+  loc_005FDFA4: push 00446644h
+  loc_005FDFA9: push edx
+  loc_005FDFAA: push eax
+  loc_005FDFAB: call edi
+  loc_005FDFAD: lea ecx, var_1C
+  loc_005FDFB0: call [00401430h] ; __vbaFreeStr
+  loc_005FDFB6: lea ecx, var_20
+  loc_005FDFB9: call [0040142Ch] ; __vbaFreeObj
+  loc_005FDFBF: mov eax, [esi]
+  loc_005FDFC1: push esi
+  loc_005FDFC2: call [eax+0000031Ch]
+  loc_005FDFC8: lea ecx, var_20
+  loc_005FDFCB: push eax
+  loc_005FDFCC: push ecx
+  loc_005FDFCD: call [00401128h] ; __vbaObjSet
+  loc_005FDFD3: mov ebx, eax
+  loc_005FDFD5: lea eax, var_28
+  loc_005FDFD8: push eax
+  loc_005FDFD9: push ebx
+  loc_005FDFDA: mov edx, [ebx]
+  loc_005FDFDC: call [edx+00000190h]
+  loc_005FDFE2: test eax, eax
+  loc_005FDFE4: fnclex
+  loc_005FDFE6: jge 005FDFF6h
+  loc_005FDFE8: push 00000190h
+  loc_005FDFED: push 00446E04h
+  loc_005FDFF2: push ebx
+  loc_005FDFF3: push eax
+  loc_005FDFF4: call edi
+  loc_005FDFF6: mov bx, var_28
+  loc_005FDFFA: lea ecx, var_20
+  loc_005FDFFD: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE003: test bx, bx
+  loc_005FE006: jz 005FE070h
+  loc_005FE008: mov ecx, [esi]
+  loc_005FE00A: push esi
+  loc_005FE00B: call [ecx+0000031Ch]
+  loc_005FE011: lea edx, var_20
+  loc_005FE014: push eax
+  loc_005FE015: push edx
+  loc_005FE016: call [00401128h] ; __vbaObjSet
+  loc_005FE01C: mov ebx, eax
+  loc_005FE01E: lea ecx, var_28
+  loc_005FE021: push ecx
+  loc_005FE022: push ebx
+  loc_005FE023: mov eax, [ebx]
+  loc_005FE025: call [eax+000000F0h]
+  loc_005FE02B: test eax, eax
+  loc_005FE02D: fnclex
+  loc_005FE02F: jge 005FE03Fh
+  loc_005FE031: push 000000F0h
+  loc_005FE036: push 00446E04h
+  loc_005FE03B: push ebx
+  loc_005FE03C: push eax
+  loc_005FE03D: call edi
+  loc_005FE03F: movsx ecx, var_28
+  loc_005FE043: mov eax, var_18
+  loc_005FE046: push ecx
+  loc_005FE047: push eax
+  loc_005FE048: mov edx, [eax]
+  loc_005FE04A: call [edx+000008ACh]
+  loc_005FE050: test eax, eax
+  loc_005FE052: fnclex
+  loc_005FE054: jge 005FE067h
+  loc_005FE056: mov edx, var_18
+  loc_005FE059: push 000008ACh
+  loc_005FE05E: push 00446644h
+  loc_005FE063: push edx
+  loc_005FE064: push eax
+  loc_005FE065: call edi
+  loc_005FE067: lea ecx, var_20
+  loc_005FE06A: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE070: mov eax, [esi]
+  loc_005FE072: push esi
+  loc_005FE073: call [eax+00000320h]
+  loc_005FE079: lea ecx, var_20
+  loc_005FE07C: push eax
+  loc_005FE07D: push ecx
+  loc_005FE07E: call [00401128h] ; __vbaObjSet
+  loc_005FE084: mov ebx, eax
+  loc_005FE086: lea eax, var_28
+  loc_005FE089: push eax
+  loc_005FE08A: push ebx
+  loc_005FE08B: mov edx, [ebx]
+  loc_005FE08D: call [edx+00000190h]
+  loc_005FE093: test eax, eax
+  loc_005FE095: fnclex
+  loc_005FE097: jge 005FE0A7h
+  loc_005FE099: push 00000190h
+  loc_005FE09E: push 00446E04h
+  loc_005FE0A3: push ebx
+  loc_005FE0A4: push eax
+  loc_005FE0A5: call edi
+  loc_005FE0A7: mov bx, var_28
+  loc_005FE0AB: lea ecx, var_20
+  loc_005FE0AE: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE0B4: test bx, bx
+  loc_005FE0B7: jz 005FE121h
+  loc_005FE0B9: mov ecx, [esi]
+  loc_005FE0BB: push esi
+  loc_005FE0BC: call [ecx+00000320h]
+  loc_005FE0C2: lea edx, var_20
+  loc_005FE0C5: push eax
+  loc_005FE0C6: push edx
+  loc_005FE0C7: call [00401128h] ; __vbaObjSet
+  loc_005FE0CD: mov ebx, eax
+  loc_005FE0CF: lea ecx, var_28
+  loc_005FE0D2: push ecx
+  loc_005FE0D3: push ebx
+  loc_005FE0D4: mov eax, [ebx]
+  loc_005FE0D6: call [eax+000000F0h]
+  loc_005FE0DC: test eax, eax
+  loc_005FE0DE: fnclex
+  loc_005FE0E0: jge 005FE0F0h
+  loc_005FE0E2: push 000000F0h
+  loc_005FE0E7: push 00446E04h
+  loc_005FE0EC: push ebx
+  loc_005FE0ED: push eax
+  loc_005FE0EE: call edi
+  loc_005FE0F0: movsx ecx, var_28
+  loc_005FE0F4: mov eax, var_18
+  loc_005FE0F7: push ecx
+  loc_005FE0F8: push eax
+  loc_005FE0F9: mov edx, [eax]
+  loc_005FE0FB: call [edx+00000848h]
+  loc_005FE101: test eax, eax
+  loc_005FE103: fnclex
+  loc_005FE105: jge 005FE118h
+  loc_005FE107: mov edx, var_18
+  loc_005FE10A: push 00000848h
+  loc_005FE10F: push 00446644h
+  loc_005FE114: push edx
+  loc_005FE115: push eax
+  loc_005FE116: call edi
+  loc_005FE118: lea ecx, var_20
+  loc_005FE11B: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE121: mov eax, [esi]
+  loc_005FE123: push esi
+  loc_005FE124: call [eax+00000328h]
+  loc_005FE12A: lea ecx, var_20
+  loc_005FE12D: push eax
+  loc_005FE12E: push ecx
+  loc_005FE12F: call [00401128h] ; __vbaObjSet
+  loc_005FE135: mov ebx, eax
+  loc_005FE137: lea eax, var_28
+  loc_005FE13A: push eax
+  loc_005FE13B: push ebx
+  loc_005FE13C: mov edx, [ebx]
+  loc_005FE13E: call [edx+00000190h]
+  loc_005FE144: test eax, eax
+  loc_005FE146: fnclex
+  loc_005FE148: jge 005FE158h
+  loc_005FE14A: push 00000190h
+  loc_005FE14F: push 00446E04h
+  loc_005FE154: push ebx
+  loc_005FE155: push eax
+  loc_005FE156: call edi
+  loc_005FE158: mov bx, var_28
+  loc_005FE15C: lea ecx, var_20
+  loc_005FE15F: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE165: test bx, bx
+  loc_005FE168: jz 005FE1D2h
+  loc_005FE16A: mov ecx, [esi]
+  loc_005FE16C: push esi
+  loc_005FE16D: call [ecx+00000328h]
+  loc_005FE173: lea edx, var_20
+  loc_005FE176: push eax
+  loc_005FE177: push edx
+  loc_005FE178: call [00401128h] ; __vbaObjSet
+  loc_005FE17E: mov ebx, eax
+  loc_005FE180: lea ecx, var_28
+  loc_005FE183: push ecx
+  loc_005FE184: push ebx
+  loc_005FE185: mov eax, [ebx]
+  loc_005FE187: call [eax+000000F0h]
+  loc_005FE18D: test eax, eax
+  loc_005FE18F: fnclex
+  loc_005FE191: jge 005FE1A1h
+  loc_005FE193: push 000000F0h
+  loc_005FE198: push 00446E04h
+  loc_005FE19D: push ebx
+  loc_005FE19E: push eax
+  loc_005FE19F: call edi
+  loc_005FE1A1: movsx ecx, var_28
+  loc_005FE1A5: mov eax, var_18
+  loc_005FE1A8: push ecx
+  loc_005FE1A9: push eax
+  loc_005FE1AA: mov edx, [eax]
+  loc_005FE1AC: call [edx+000007B8h]
+  loc_005FE1B2: test eax, eax
+  loc_005FE1B4: fnclex
+  loc_005FE1B6: jge 005FE1C9h
+  loc_005FE1B8: mov edx, var_18
+  loc_005FE1BB: push 000007B8h
+  loc_005FE1C0: push 00446644h
+  loc_005FE1C5: push edx
+  loc_005FE1C6: push eax
+  loc_005FE1C7: call edi
+  loc_005FE1C9: lea ecx, var_20
+  loc_005FE1CC: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE1D2: mov eax, [esi]
+  loc_005FE1D4: push esi
+  loc_005FE1D5: call [eax+0000032Ch]
+  loc_005FE1DB: lea ecx, var_20
+  loc_005FE1DE: push eax
+  loc_005FE1DF: push ecx
+  loc_005FE1E0: call [00401128h] ; __vbaObjSet
+  loc_005FE1E6: mov ebx, eax
+  loc_005FE1E8: lea eax, var_28
+  loc_005FE1EB: push eax
+  loc_005FE1EC: push ebx
+  loc_005FE1ED: mov edx, [ebx]
+  loc_005FE1EF: call [edx+00000190h]
+  loc_005FE1F5: test eax, eax
+  loc_005FE1F7: fnclex
+  loc_005FE1F9: jge 005FE209h
+  loc_005FE1FB: push 00000190h
+  loc_005FE200: push 00446E04h
+  loc_005FE205: push ebx
+  loc_005FE206: push eax
+  loc_005FE207: call edi
+  loc_005FE209: mov bx, var_28
+  loc_005FE20D: lea ecx, var_20
+  loc_005FE210: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE216: test bx, bx
+  loc_005FE219: jz 005FE283h
+  loc_005FE21B: mov ecx, [esi]
+  loc_005FE21D: push esi
+  loc_005FE21E: call [ecx+0000032Ch]
+  loc_005FE224: lea edx, var_20
+  loc_005FE227: push eax
+  loc_005FE228: push edx
+  loc_005FE229: call [00401128h] ; __vbaObjSet
+  loc_005FE22F: mov esi, eax
+  loc_005FE231: lea ecx, var_28
+  loc_005FE234: push ecx
+  loc_005FE235: push esi
+  loc_005FE236: mov eax, [esi]
+  loc_005FE238: call [eax+000000F0h]
+  loc_005FE23E: test eax, eax
+  loc_005FE240: fnclex
+  loc_005FE242: jge 005FE252h
+  loc_005FE244: push 000000F0h
+  loc_005FE249: push 00446E04h
+  loc_005FE24E: push esi
+  loc_005FE24F: push eax
+  loc_005FE250: call edi
+  loc_005FE252: movsx ecx, var_28
+  loc_005FE256: mov eax, var_18
+  loc_005FE259: push ecx
+  loc_005FE25A: push eax
+  loc_005FE25B: mov edx, [eax]
+  loc_005FE25D: call [edx+00000850h]
+  loc_005FE263: test eax, eax
+  loc_005FE265: fnclex
+  loc_005FE267: jge 005FE27Ah
+  loc_005FE269: mov edx, var_18
+  loc_005FE26C: push 00000850h
+  loc_005FE271: push 00446644h
+  loc_005FE276: push edx
+  loc_005FE277: push eax
+  loc_005FE278: call edi
+  loc_005FE27A: lea ecx, var_20
+  loc_005FE27D: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE283: mov var_4, 00000000h
+  loc_005FE28A: push 005FE2B8h
+  loc_005FE28F: jmp 005FE2AEh
+  loc_005FE291: lea ecx, var_1C
+  loc_005FE294: call [00401430h] ; __vbaFreeStr
+  loc_005FE29A: lea eax, var_24
+  loc_005FE29D: lea ecx, var_20
+  loc_005FE2A0: push eax
+  loc_005FE2A1: push ecx
+  loc_005FE2A2: push 00000002h
+  loc_005FE2A4: call [00401068h] ; __vbaFreeObjList
+  loc_005FE2AA: add esp, 0000000Ch
+  loc_005FE2AD: ret
+  loc_005FE2AE: lea ecx, var_18
+  loc_005FE2B1: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE2B7: ret
+  loc_005FE2B8: mov eax, Me
+  loc_005FE2BB: push eax
+  loc_005FE2BC: mov edx, [eax]
+  loc_005FE2BE: call [edx+00000008h]
+  loc_005FE2C1: mov eax, var_4
+  loc_005FE2C4: mov ecx, var_14
+  loc_005FE2C7: pop edi
+  loc_005FE2C8: pop esi
+  loc_005FE2C9: mov fs:[00000000h], ecx
+  loc_005FE2D0: pop ebx
+  loc_005FE2D1: mov esp, ebp
+  loc_005FE2D3: pop ebp
+  loc_005FE2D4: retn 0004h
+End Sub
+
+Private Sub Proc_15_7_5FE2E0
+  loc_005FE2E0: push ebp
+  loc_005FE2E1: mov ebp, esp
+  loc_005FE2E3: sub esp, 00000008h
+  loc_005FE2E6: push 00412856h ; __vbaExceptHandler
+  loc_005FE2EB: mov eax, fs:[00000000h]
+  loc_005FE2F1: push eax
+  loc_005FE2F2: mov fs:[00000000h], esp
+  loc_005FE2F9: sub esp, 00000068h
+  loc_005FE2FC: push ebx
+  loc_005FE2FD: push esi
+  loc_005FE2FE: push edi
+  loc_005FE2FF: mov var_8, esp
+  loc_005FE302: mov var_4, 00403FD8h
+  loc_005FE309: mov edi, Me
+  loc_005FE30C: xor eax, eax
+  loc_005FE30E: mov var_18, eax
+  loc_005FE311: mov var_1C, eax
+  loc_005FE314: mov var_20, eax
+  loc_005FE317: mov var_30, eax
+  loc_005FE31A: mov var_40, eax
+  loc_005FE31D: mov var_50, eax
+  loc_005FE320: mov var_60, eax
+  loc_005FE323: mov eax, [edi]
+  loc_005FE325: push edi
+  loc_005FE326: call [eax+00000320h]
+  loc_005FE32C: mov esi, [00401128h] ; __vbaObjSet
+  loc_005FE332: lea ecx, var_20
+  loc_005FE335: push eax
+  loc_005FE336: push ecx
+  loc_005FE337: call __vbaObjSet
+  loc_005FE339: mov ebx, eax
+  loc_005FE33B: push ebx
+  loc_005FE33C: mov edx, [ebx]
+  loc_005FE33E: call [edx+000001E8h]
+  loc_005FE344: test eax, eax
+  loc_005FE346: fnclex
+  loc_005FE348: jge 005FE35Ch
+  loc_005FE34A: push 000001E8h
+  loc_005FE34F: push 00446E04h
+  loc_005FE354: push ebx
+  loc_005FE355: push eax
+  loc_005FE356: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE35C: lea ecx, var_20
+  loc_005FE35F: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE365: mov eax, [edi]
+  loc_005FE367: push edi
+  loc_005FE368: call [eax+00000320h]
+  loc_005FE36E: lea ecx, var_20
+  loc_005FE371: push eax
+  loc_005FE372: push ecx
+  loc_005FE373: call __vbaObjSet
+  loc_005FE375: sub esp, 00000010h
+  loc_005FE378: mov ebx, eax
+  loc_005FE37A: mov ecx, esp
+  loc_005FE37C: mov eax, 0000000Ah
+  loc_005FE381: mov var_50, eax
+  loc_005FE384: mov var_48, 80020004h
+  loc_005FE38B: mov edx, [ebx]
+  loc_005FE38D: mov [ecx], eax
+  loc_005FE38F: mov eax, var_4C
+  loc_005FE392: push 00447D44h ; "Use System"
+  loc_005FE397: mov [ecx+00000004h], eax
+  loc_005FE39A: mov eax, var_48
+  loc_005FE39D: push ebx
+  loc_005FE39E: mov [ecx+00000008h], eax
+  loc_005FE3A1: mov eax, var_44
+  loc_005FE3A4: mov [ecx+0000000Ch], eax
+  loc_005FE3A7: call [edx+000001ECh]
+  loc_005FE3AD: test eax, eax
+  loc_005FE3AF: fnclex
+  loc_005FE3B1: jge 005FE3C5h
+  loc_005FE3B3: push 000001ECh
+  loc_005FE3B8: push 00446E04h
+  loc_005FE3BD: push ebx
+  loc_005FE3BE: push eax
+  loc_005FE3BF: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE3C5: lea ecx, var_20
+  loc_005FE3C8: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE3CE: mov ecx, 00000001h
+  loc_005FE3D3: mov var_14, ecx
+  loc_005FE3D6: mov eax, 00000007h
+  loc_005FE3DB: cmp ecx, eax
+  loc_005FE3DD: jg 005FE4F3h
+  loc_005FE3E3: add ecx, 00000003h
+  loc_005FE3E6: jo 005FE540h
+  loc_005FE3EC: call [004011E4h] ; __vbaI2I4
+  loc_005FE3F2: push eax
+  loc_005FE3F3: push 00000008h
+  loc_005FE3F5: lea ecx, var_30
+  loc_005FE3F8: push 000007CCh
+  loc_005FE3FD: push ecx
+  loc_005FE3FE: call [004012CCh] ; rtcPackDate
+  loc_005FE404: lea edx, var_50
+  loc_005FE407: lea ecx, var_40
+  loc_005FE40A: mov var_48, 00447D60h ; "dddd"
+  loc_005FE411: mov var_50, 00000008h
+  loc_005FE418: call [00401374h] ; __vbaVarDup
+  loc_005FE41E: push 00000001h
+  loc_005FE420: lea edx, var_40
+  loc_005FE423: push 00000001h
+  loc_005FE425: lea eax, var_30
+  loc_005FE428: push edx
+  loc_005FE429: push eax
+  loc_005FE42A: call [004013E4h] ; rtcBstrFromFormatVar
+  loc_005FE430: mov edx, eax
+  loc_005FE432: lea ecx, var_1C
+  loc_005FE435: call [004013C0h] ; __vbaStrMove
+  loc_005FE43B: mov ecx, [edi]
+  loc_005FE43D: push edi
+  loc_005FE43E: call [ecx+00000320h]
+  loc_005FE444: lea edx, var_20
+  loc_005FE447: push eax
+  loc_005FE448: push edx
+  loc_005FE449: call __vbaObjSet
+  loc_005FE44B: mov edx, var_1C
+  loc_005FE44E: sub esp, 00000010h
+  loc_005FE451: mov var_78, edx
+  loc_005FE454: mov edx, esp
+  loc_005FE456: mov ecx, 0000000Ah
+  loc_005FE45B: mov esi, eax
+  loc_005FE45D: mov [edx], ecx
+  loc_005FE45F: mov ecx, var_5C
+  loc_005FE462: mov eax, 80020004h
+  loc_005FE467: mov var_1C, 00000000h
+  loc_005FE46E: mov ebx, [esi]
+  loc_005FE470: mov [edx+00000004h], ecx
+  loc_005FE473: lea ecx, var_18
+  loc_005FE476: mov [edx+00000008h], eax
+  loc_005FE479: mov eax, var_54
+  loc_005FE47C: mov [edx+0000000Ch], eax
+  loc_005FE47F: mov edx, var_78
+  loc_005FE482: call [004013C0h] ; __vbaStrMove
+  loc_005FE488: push eax
+  loc_005FE489: push esi
+  loc_005FE48A: call [ebx+000001ECh]
+  loc_005FE490: test eax, eax
+  loc_005FE492: fnclex
+  loc_005FE494: jge 005FE4A8h
+  loc_005FE496: push 000001ECh
+  loc_005FE49B: push 00446E04h
+  loc_005FE4A0: push esi
+  loc_005FE4A1: push eax
+  loc_005FE4A2: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE4A8: lea ecx, var_1C
+  loc_005FE4AB: lea edx, var_18
+  loc_005FE4AE: push ecx
+  loc_005FE4AF: push edx
+  loc_005FE4B0: push 00000002h
+  loc_005FE4B2: call [00401324h] ; __vbaFreeStrList
+  loc_005FE4B8: add esp, 0000000Ch
+  loc_005FE4BB: lea ecx, var_20
+  loc_005FE4BE: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE4C4: lea eax, var_40
+  loc_005FE4C7: lea ecx, var_30
+  loc_005FE4CA: push eax
+  loc_005FE4CB: push ecx
+  loc_005FE4CC: push 00000002h
+  loc_005FE4CE: call [00401050h] ; __vbaFreeVarList
+  loc_005FE4D4: mov ecx, var_14
+  loc_005FE4D7: mov esi, [00401128h] ; __vbaObjSet
+  loc_005FE4DD: mov eax, 00000001h
+  loc_005FE4E2: add esp, 0000000Ch
+  loc_005FE4E5: add eax, ecx
+  loc_005FE4E7: jo 005FE540h
+  loc_005FE4E9: mov ecx, eax
+  loc_005FE4EB: mov var_14, ecx
+  loc_005FE4EE: jmp 005FE3D6h
+  loc_005FE4F3: push 005FE52Bh
+  loc_005FE4F8: jmp 005FE52Ah
+  loc_005FE4FA: lea edx, var_1C
+  loc_005FE4FD: lea eax, var_18
+  loc_005FE500: push edx
+  loc_005FE501: push eax
+  loc_005FE502: push 00000002h
+  loc_005FE504: call [00401324h] ; __vbaFreeStrList
+  loc_005FE50A: add esp, 0000000Ch
+  loc_005FE50D: lea ecx, var_20
+  loc_005FE510: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE516: lea ecx, var_40
+  loc_005FE519: lea edx, var_30
+  loc_005FE51C: push ecx
+  loc_005FE51D: push edx
+  loc_005FE51E: push 00000002h
+  loc_005FE520: call [00401050h] ; __vbaFreeVarList
+  loc_005FE526: add esp, 0000000Ch
+  loc_005FE529: ret
+  loc_005FE52A: ret
+  loc_005FE52B: mov ecx, var_10
+  loc_005FE52E: pop edi
+  loc_005FE52F: pop esi
+  loc_005FE530: xor eax, eax
+  loc_005FE532: mov fs:[00000000h], ecx
+  loc_005FE539: pop ebx
+  loc_005FE53A: mov esp, ebp
+  loc_005FE53C: pop ebp
+  loc_005FE53D: retn 0004h
+End Sub
+
+Private Sub Proc_15_8_5FE550
+  loc_005FE550: push ebp
+  loc_005FE551: mov ebp, esp
+  loc_005FE553: sub esp, 00000008h
+  loc_005FE556: push 00412856h ; __vbaExceptHandler
+  loc_005FE55B: mov eax, fs:[00000000h]
+  loc_005FE561: push eax
+  loc_005FE562: mov fs:[00000000h], esp
+  loc_005FE569: sub esp, 00000020h
+  loc_005FE56C: push ebx
+  loc_005FE56D: push esi
+  loc_005FE56E: push edi
+  loc_005FE56F: mov var_8, esp
+  loc_005FE572: mov var_4, 00403FE8h
+  loc_005FE579: mov esi, Me
+  loc_005FE57C: mov var_14, 00000000h
+  loc_005FE583: push esi
+  loc_005FE584: mov eax, [esi]
+  loc_005FE586: call [eax+00000328h]
+  loc_005FE58C: mov ebx, [00401128h] ; __vbaObjSet
+  loc_005FE592: lea ecx, var_14
+  loc_005FE595: push eax
+  loc_005FE596: push ecx
+  loc_005FE597: call ebx
+  loc_005FE599: mov edi, eax
+  loc_005FE59B: push edi
+  loc_005FE59C: mov edx, [edi]
+  loc_005FE59E: call [edx+000001E8h]
+  loc_005FE5A4: test eax, eax
+  loc_005FE5A6: fnclex
+  loc_005FE5A8: jge 005FE5BCh
+  loc_005FE5AA: push 000001E8h
+  loc_005FE5AF: push 00446E04h
+  loc_005FE5B4: push edi
+  loc_005FE5B5: push eax
+  loc_005FE5B6: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE5BC: lea ecx, var_14
+  loc_005FE5BF: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE5C5: mov eax, [esi]
+  loc_005FE5C7: push esi
+  loc_005FE5C8: call [eax+00000328h]
+  loc_005FE5CE: lea ecx, var_14
+  loc_005FE5D1: push eax
+  loc_005FE5D2: push ecx
+  loc_005FE5D3: call ebx
+  loc_005FE5D5: sub esp, 00000010h
+  loc_005FE5D8: mov edi, eax
+  loc_005FE5DA: mov ecx, esp
+  loc_005FE5DC: mov eax, 0000000Ah
+  loc_005FE5E1: mov edx, [edi]
+  loc_005FE5E3: push 00447D70h ; "Month Style"
+  loc_005FE5E8: mov [ecx], eax
+  loc_005FE5EA: mov eax, var_20
+  loc_005FE5ED: push edi
+  loc_005FE5EE: mov [ecx+00000004h], eax
+  loc_005FE5F1: mov eax, 80020004h
+  loc_005FE5F6: mov [ecx+00000008h], eax
+  loc_005FE5F9: mov eax, var_18
+  loc_005FE5FC: mov [ecx+0000000Ch], eax
+  loc_005FE5FF: call [edx+000001ECh]
+  loc_005FE605: test eax, eax
+  loc_005FE607: fnclex
+  loc_005FE609: jge 005FE61Dh
+  loc_005FE60B: push 000001ECh
+  loc_005FE610: push 00446E04h
+  loc_005FE615: push edi
+  loc_005FE616: push eax
+  loc_005FE617: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE61D: lea ecx, var_14
+  loc_005FE620: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE626: mov ecx, [esi]
+  loc_005FE628: push esi
+  loc_005FE629: call [ecx+00000328h]
+  loc_005FE62F: lea edx, var_14
+  loc_005FE632: push eax
+  loc_005FE633: push edx
+  loc_005FE634: call ebx
+  loc_005FE636: sub esp, 00000010h
+  loc_005FE639: mov edi, eax
+  loc_005FE63B: mov edx, esp
+  loc_005FE63D: mov eax, 0000000Ah
+  loc_005FE642: mov ecx, [edi]
+  loc_005FE644: push 00447D8Ch ; "Period Style"
+  loc_005FE649: mov [edx], eax
+  loc_005FE64B: mov eax, var_20
+  loc_005FE64E: push edi
+  loc_005FE64F: mov [edx+00000004h], eax
+  loc_005FE652: mov eax, 80020004h
+  loc_005FE657: mov [edx+00000008h], eax
+  loc_005FE65A: mov eax, var_18
+  loc_005FE65D: mov [edx+0000000Ch], eax
+  loc_005FE660: call [ecx+000001ECh]
+  loc_005FE666: test eax, eax
+  loc_005FE668: fnclex
+  loc_005FE66A: jge 005FE67Eh
+  loc_005FE66C: push 000001ECh
+  loc_005FE671: push 00446E04h
+  loc_005FE676: push edi
+  loc_005FE677: push eax
+  loc_005FE678: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE67E: mov edi, [0040142Ch] ; __vbaFreeObj
+  loc_005FE684: lea ecx, var_14
+  loc_005FE687: call edi
+  loc_005FE689: mov ecx, [esi]
+  loc_005FE68B: push esi
+  loc_005FE68C: call [ecx+00000328h]
+  loc_005FE692: lea edx, var_14
+  loc_005FE695: push eax
+  loc_005FE696: push edx
+  loc_005FE697: call ebx
+  loc_005FE699: sub esp, 00000010h
+  loc_005FE69C: mov ecx, 0000000Ah
+  loc_005FE6A1: mov ebx, esp
+  loc_005FE6A3: mov esi, eax
+  loc_005FE6A5: mov eax, 80020004h
+  loc_005FE6AA: push 00447DACh ; "Week Style"
+  loc_005FE6AF: mov edx, [esi]
+  loc_005FE6B1: mov [ebx], ecx
+  loc_005FE6B3: mov ecx, var_20
+  loc_005FE6B6: push esi
+  loc_005FE6B7: mov [ebx+00000004h], ecx
+  loc_005FE6BA: mov [ebx+00000008h], eax
+  loc_005FE6BD: mov eax, var_18
+  loc_005FE6C0: mov [ebx+0000000Ch], eax
+  loc_005FE6C3: call [edx+000001ECh]
+  loc_005FE6C9: test eax, eax
+  loc_005FE6CB: fnclex
+  loc_005FE6CD: jge 005FE6E1h
+  loc_005FE6CF: push 000001ECh
+  loc_005FE6D4: push 00446E04h
+  loc_005FE6D9: push esi
+  loc_005FE6DA: push eax
+  loc_005FE6DB: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE6E1: lea ecx, var_14
+  loc_005FE6E4: call edi
+  loc_005FE6E6: push 005FE6F8h
+  loc_005FE6EB: jmp 005FE6F7h
+  loc_005FE6ED: lea ecx, var_14
+  loc_005FE6F0: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE6F6: ret
+  loc_005FE6F7: ret
+  loc_005FE6F8: mov ecx, var_10
+  loc_005FE6FB: pop edi
+  loc_005FE6FC: pop esi
+  loc_005FE6FD: xor eax, eax
+  loc_005FE6FF: mov fs:[00000000h], ecx
+  loc_005FE706: pop ebx
+  loc_005FE707: mov esp, ebp
+  loc_005FE709: pop ebp
+  loc_005FE70A: retn 0004h
+End Sub
+
+Private Sub Proc_15_9_5FE710
+  loc_005FE710: push ebp
+  loc_005FE711: mov ebp, esp
+  loc_005FE713: sub esp, 00000008h
+  loc_005FE716: push 00412856h ; __vbaExceptHandler
+  loc_005FE71B: mov eax, fs:[00000000h]
+  loc_005FE721: push eax
+  loc_005FE722: mov fs:[00000000h], esp
+  loc_005FE729: sub esp, 00000020h
+  loc_005FE72C: push ebx
+  loc_005FE72D: push esi
+  loc_005FE72E: push edi
+  loc_005FE72F: mov var_8, esp
+  loc_005FE732: mov var_4, 00403FF8h
+  loc_005FE739: mov esi, Me
+  loc_005FE73C: mov var_14, 00000000h
+  loc_005FE743: push esi
+  loc_005FE744: mov eax, [esi]
+  loc_005FE746: call [eax+0000032Ch]
+  loc_005FE74C: mov edi, [00401128h] ; __vbaObjSet
+  loc_005FE752: lea ecx, var_14
+  loc_005FE755: push eax
+  loc_005FE756: push ecx
+  loc_005FE757: call edi
+  loc_005FE759: mov ebx, eax
+  loc_005FE75B: push ebx
+  loc_005FE75C: mov edx, [ebx]
+  loc_005FE75E: call [edx+000001E8h]
+  loc_005FE764: test eax, eax
+  loc_005FE766: fnclex
+  loc_005FE768: jge 005FE77Ch
+  loc_005FE76A: push 000001E8h
+  loc_005FE76F: push 00446E04h
+  loc_005FE774: push ebx
+  loc_005FE775: push eax
+  loc_005FE776: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE77C: lea ecx, var_14
+  loc_005FE77F: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE785: mov eax, [esi]
+  loc_005FE787: push esi
+  loc_005FE788: call [eax+0000032Ch]
+  loc_005FE78E: lea ecx, var_14
+  loc_005FE791: push eax
+  loc_005FE792: push ecx
+  loc_005FE793: call edi
+  loc_005FE795: sub esp, 00000010h
+  loc_005FE798: mov ebx, eax
+  loc_005FE79A: mov ecx, esp
+  loc_005FE79C: mov eax, 0000000Ah
+  loc_005FE7A1: mov edx, [ebx]
+  loc_005FE7A3: push 00447DC8h ; "No Line"
+  loc_005FE7A8: mov [ecx], eax
+  loc_005FE7AA: mov eax, var_20
+  loc_005FE7AD: push ebx
+  loc_005FE7AE: mov [ecx+00000004h], eax
+  loc_005FE7B1: mov eax, 80020004h
+  loc_005FE7B6: mov [ecx+00000008h], eax
+  loc_005FE7B9: mov eax, var_18
+  loc_005FE7BC: mov [ecx+0000000Ch], eax
+  loc_005FE7BF: call [edx+000001ECh]
+  loc_005FE7C5: test eax, eax
+  loc_005FE7C7: fnclex
+  loc_005FE7C9: jge 005FE7DDh
+  loc_005FE7CB: push 000001ECh
+  loc_005FE7D0: push 00446E04h
+  loc_005FE7D5: push ebx
+  loc_005FE7D6: push eax
+  loc_005FE7D7: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE7DD: lea ecx, var_14
+  loc_005FE7E0: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE7E6: mov ecx, [esi]
+  loc_005FE7E8: push esi
+  loc_005FE7E9: call [ecx+0000032Ch]
+  loc_005FE7EF: lea edx, var_14
+  loc_005FE7F2: push eax
+  loc_005FE7F3: push edx
+  loc_005FE7F4: call edi
+  loc_005FE7F6: sub esp, 00000010h
+  loc_005FE7F9: mov ebx, eax
+  loc_005FE7FB: mov edx, esp
+  loc_005FE7FD: mov eax, 0000000Ah
+  loc_005FE802: mov ecx, [ebx]
+  loc_005FE804: mov var_1C, 80020004h
+  loc_005FE80B: mov [edx], eax
+  loc_005FE80D: mov eax, var_20
+  loc_005FE810: push 00447DDCh ; "3D"
+  loc_005FE815: push ebx
+  loc_005FE816: mov [edx+00000004h], eax
+  loc_005FE819: mov eax, var_1C
+  loc_005FE81C: mov [edx+00000008h], eax
+  loc_005FE81F: mov eax, var_18
+  loc_005FE822: mov [edx+0000000Ch], eax
+  loc_005FE825: call [ecx+000001ECh]
+  loc_005FE82B: test eax, eax
+  loc_005FE82D: fnclex
+  loc_005FE82F: jge 005FE843h
+  loc_005FE831: push 000001ECh
+  loc_005FE836: push 00446E04h
+  loc_005FE83B: push ebx
+  loc_005FE83C: push eax
+  loc_005FE83D: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE843: lea ecx, var_14
+  loc_005FE846: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE84C: mov ecx, [esi]
+  loc_005FE84E: push esi
+  loc_005FE84F: call [ecx+0000032Ch]
+  loc_005FE855: lea edx, var_14
+  loc_005FE858: push eax
+  loc_005FE859: push edx
+  loc_005FE85A: call edi
+  loc_005FE85C: sub esp, 00000010h
+  loc_005FE85F: mov ebx, eax
+  loc_005FE861: mov edx, esp
+  loc_005FE863: mov eax, 0000000Ah
+  loc_005FE868: mov ecx, [ebx]
+  loc_005FE86A: push 00447DE8h ; "Flat"
+  loc_005FE86F: mov [edx], eax
+  loc_005FE871: mov eax, var_20
+  loc_005FE874: push ebx
+  loc_005FE875: mov [edx+00000004h], eax
+  loc_005FE878: mov eax, 80020004h
+  loc_005FE87D: mov [edx+00000008h], eax
+  loc_005FE880: mov eax, var_18
+  loc_005FE883: mov [edx+0000000Ch], eax
+  loc_005FE886: call [ecx+000001ECh]
+  loc_005FE88C: test eax, eax
+  loc_005FE88E: fnclex
+  loc_005FE890: jge 005FE8A4h
+  loc_005FE892: push 000001ECh
+  loc_005FE897: push 00446E04h
+  loc_005FE89C: push ebx
+  loc_005FE89D: push eax
+  loc_005FE89E: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE8A4: mov ebx, [0040142Ch] ; __vbaFreeObj
+  loc_005FE8AA: lea ecx, var_14
+  loc_005FE8AD: call ebx
+  loc_005FE8AF: mov ecx, [esi]
+  loc_005FE8B1: push esi
+  loc_005FE8B2: call [ecx+0000032Ch]
+  loc_005FE8B8: lea edx, var_14
+  loc_005FE8BB: push eax
+  loc_005FE8BC: push edx
+  loc_005FE8BD: call edi
+  loc_005FE8BF: sub esp, 00000010h
+  loc_005FE8C2: mov ecx, 0000000Ah
+  loc_005FE8C7: mov edi, esp
+  loc_005FE8C9: mov esi, eax
+  loc_005FE8CB: mov eax, 80020004h
+  loc_005FE8D0: push 00447DF8h ; "Sunken"
+  loc_005FE8D5: mov edx, [esi]
+  loc_005FE8D7: mov [edi], ecx
+  loc_005FE8D9: mov ecx, var_20
+  loc_005FE8DC: push esi
+  loc_005FE8DD: mov [edi+00000004h], ecx
+  loc_005FE8E0: mov [edi+00000008h], eax
+  loc_005FE8E3: mov eax, var_18
+  loc_005FE8E6: mov [edi+0000000Ch], eax
+  loc_005FE8E9: call [edx+000001ECh]
+  loc_005FE8EF: test eax, eax
+  loc_005FE8F1: fnclex
+  loc_005FE8F3: jge 005FE907h
+  loc_005FE8F5: push 000001ECh
+  loc_005FE8FA: push 00446E04h
+  loc_005FE8FF: push esi
+  loc_005FE900: push eax
+  loc_005FE901: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE907: lea ecx, var_14
+  loc_005FE90A: call ebx
+  loc_005FE90C: push 005FE91Eh
+  loc_005FE911: jmp 005FE91Dh
+  loc_005FE913: lea ecx, var_14
+  loc_005FE916: call [0040142Ch] ; __vbaFreeObj
+  loc_005FE91C: ret
+  loc_005FE91D: ret
+  loc_005FE91E: mov ecx, var_10
+  loc_005FE921: pop edi
+  loc_005FE922: pop esi
+  loc_005FE923: xor eax, eax
+  loc_005FE925: mov fs:[00000000h], ecx
+  loc_005FE92C: pop ebx
+  loc_005FE92D: mov esp, ebp
+  loc_005FE92F: pop ebp
+  loc_005FE930: retn 0004h
+End Sub
+
+Private Sub Proc_15_10_5FE940
+  loc_005FE940: push ebp
+  loc_005FE941: mov ebp, esp
+  loc_005FE943: sub esp, 0000000Ch
+  loc_005FE946: push 00412856h ; __vbaExceptHandler
+  loc_005FE94B: mov eax, fs:[00000000h]
+  loc_005FE951: push eax
+  loc_005FE952: mov fs:[00000000h], esp
+  loc_005FE959: sub esp, 0000000Ch
+  loc_005FE95C: push ebx
+  loc_005FE95D: push esi
+  loc_005FE95E: push edi
+  loc_005FE95F: mov var_C, esp
+  loc_005FE962: mov var_8, 00404008h
+  loc_005FE969: mov esi, Me
+  loc_005FE96C: mov eax, esi
+  loc_005FE96E: and eax, 00000001h
+  loc_005FE971: mov var_4, eax
+  loc_005FE974: and esi, FFFFFFFEh
+  loc_005FE977: push esi
+  loc_005FE978: mov Me, esi
+  loc_005FE97B: mov ecx, [esi]
+  loc_005FE97D: call [ecx+00000004h]
+  loc_005FE980: mov eax, [esi+00000010h]
+  loc_005FE983: push FFFFFFFFh
+  loc_005FE985: push eax
+  loc_005FE986: mov edx, [eax]
+  loc_005FE988: call [edx+000002ACh]
+  loc_005FE98E: test eax, eax
+  loc_005FE990: fnclex
+  loc_005FE992: jge 005FE9A9h
+  loc_005FE994: mov ecx, [esi+00000010h]
+  loc_005FE997: push 000002ACh
+  loc_005FE99C: push 00447C2Ch
+  loc_005FE9A1: push ecx
+  loc_005FE9A2: push eax
+  loc_005FE9A3: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FE9A9: mov var_4, 00000000h
+  loc_005FE9B0: mov eax, Me
+  loc_005FE9B3: push eax
+  loc_005FE9B4: mov edx, [eax]
+  loc_005FE9B6: call [edx+00000008h]
+  loc_005FE9B9: mov eax, var_4
+  loc_005FE9BC: mov ecx, var_14
+  loc_005FE9BF: pop edi
+  loc_005FE9C0: pop esi
+  loc_005FE9C1: mov fs:[00000000h], ecx
+  loc_005FE9C8: pop ebx
+  loc_005FE9C9: mov esp, ebp
+  loc_005FE9CB: pop ebp
+  loc_005FE9CC: retn 0004h
+End Sub
+
+Private Sub Proc_15_11_5FE9D0
+  loc_005FE9D0: push ebp
+  loc_005FE9D1: mov ebp, esp
+  loc_005FE9D3: sub esp, 0000000Ch
+  loc_005FE9D6: push 00412856h ; __vbaExceptHandler
+  loc_005FE9DB: mov eax, fs:[00000000h]
+  loc_005FE9E1: push eax
+  loc_005FE9E2: mov fs:[00000000h], esp
+  loc_005FE9E9: sub esp, 0000000Ch
+  loc_005FE9EC: push ebx
+  loc_005FE9ED: push esi
+  loc_005FE9EE: push edi
+  loc_005FE9EF: mov var_C, esp
+  loc_005FE9F2: mov var_8, 00404010h
+  loc_005FE9F9: mov esi, Me
+  loc_005FE9FC: mov eax, esi
+  loc_005FE9FE: and eax, 00000001h
+  loc_005FEA01: mov var_4, eax
+  loc_005FEA04: and esi, FFFFFFFEh
+  loc_005FEA07: push esi
+  loc_005FEA08: mov Me, esi
+  loc_005FEA0B: mov ecx, [esi]
+  loc_005FEA0D: call [ecx+00000004h]
+  loc_005FEA10: mov eax, [esi+00000010h]
+  loc_005FEA13: push FFFFFFFFh
+  loc_005FEA15: push eax
+  loc_005FEA16: mov edx, [eax]
+  loc_005FEA18: call [edx+000002ACh]
+  loc_005FEA1E: test eax, eax
+  loc_005FEA20: fnclex
+  loc_005FEA22: jge 005FEA39h
+  loc_005FEA24: mov ecx, [esi+00000010h]
+  loc_005FEA27: push 000002ACh
+  loc_005FEA2C: push 00447C2Ch
+  loc_005FEA31: push ecx
+  loc_005FEA32: push eax
+  loc_005FEA33: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FEA39: mov var_4, 00000000h
+  loc_005FEA40: mov eax, Me
+  loc_005FEA43: push eax
+  loc_005FEA44: mov edx, [eax]
+  loc_005FEA46: call [edx+00000008h]
+  loc_005FEA49: mov eax, var_4
+  loc_005FEA4C: mov ecx, var_14
+  loc_005FEA4F: pop edi
+  loc_005FEA50: pop esi
+  loc_005FEA51: mov fs:[00000000h], ecx
+  loc_005FEA58: pop ebx
+  loc_005FEA59: mov esp, ebp
+  loc_005FEA5B: pop ebp
+  loc_005FEA5C: retn 0004h
+End Sub
+
+Private Sub Proc_15_12_5FEA60
+  loc_005FEA60: push ebp
+  loc_005FEA61: mov ebp, esp
+  loc_005FEA63: sub esp, 00000008h
+  loc_005FEA66: push 00412856h ; __vbaExceptHandler
+  loc_005FEA6B: mov eax, fs:[00000000h]
+  loc_005FEA71: push eax
+  loc_005FEA72: mov fs:[00000000h], esp
+  loc_005FEA79: sub esp, 00000020h
+  loc_005FEA7C: push ebx
+  loc_005FEA7D: push esi
+  loc_005FEA7E: push edi
+  loc_005FEA7F: mov var_8, esp
+  loc_005FEA82: mov var_4, 00404018h
+  loc_005FEA89: mov esi, Me
+  loc_005FEA8C: mov var_14, 00000000h
+  loc_005FEA93: push esi
+  loc_005FEA94: mov eax, [esi]
+  loc_005FEA96: call [eax+00000314h]
+  loc_005FEA9C: mov ebx, [00401128h] ; __vbaObjSet
+  loc_005FEAA2: lea ecx, var_14
+  loc_005FEAA5: push eax
+  loc_005FEAA6: push ecx
+  loc_005FEAA7: call ebx
+  loc_005FEAA9: mov edi, eax
+  loc_005FEAAB: push edi
+  loc_005FEAAC: mov edx, [edi]
+  loc_005FEAAE: call [edx+000001E8h]
+  loc_005FEAB4: test eax, eax
+  loc_005FEAB6: fnclex
+  loc_005FEAB8: jge 005FEACCh
+  loc_005FEABA: push 000001E8h
+  loc_005FEABF: push 00446E04h
+  loc_005FEAC4: push edi
+  loc_005FEAC5: push eax
+  loc_005FEAC6: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FEACC: lea ecx, var_14
+  loc_005FEACF: call [0040142Ch] ; __vbaFreeObj
+  loc_005FEAD5: mov eax, [esi]
+  loc_005FEAD7: push esi
+  loc_005FEAD8: call [eax+00000314h]
+  loc_005FEADE: lea ecx, var_14
+  loc_005FEAE1: push eax
+  loc_005FEAE2: push ecx
+  loc_005FEAE3: call ebx
+  loc_005FEAE5: sub esp, 00000010h
+  loc_005FEAE8: mov edi, eax
+  loc_005FEAEA: mov ecx, esp
+  loc_005FEAEC: mov eax, 0000000Ah
+  loc_005FEAF1: mov edx, [edi]
+  loc_005FEAF3: push 00446F20h ; "mm/dd/yyyy"
+  loc_005FEAF8: mov [ecx], eax
+  loc_005FEAFA: mov eax, var_20
+  loc_005FEAFD: push edi
+  loc_005FEAFE: mov [ecx+00000004h], eax
+  loc_005FEB01: mov eax, 80020004h
+  loc_005FEB06: mov [ecx+00000008h], eax
+  loc_005FEB09: mov eax, var_18
+  loc_005FEB0C: mov [ecx+0000000Ch], eax
+  loc_005FEB0F: call [edx+000001ECh]
+  loc_005FEB15: test eax, eax
+  loc_005FEB17: fnclex
+  loc_005FEB19: jge 005FEB2Dh
+  loc_005FEB1B: push 000001ECh
+  loc_005FEB20: push 00446E04h
+  loc_005FEB25: push edi
+  loc_005FEB26: push eax
+  loc_005FEB27: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FEB2D: lea ecx, var_14
+  loc_005FEB30: call [0040142Ch] ; __vbaFreeObj
+  loc_005FEB36: mov ecx, [esi]
+  loc_005FEB38: push esi
+  loc_005FEB39: call [ecx+00000314h]
+  loc_005FEB3F: lea edx, var_14
+  loc_005FEB42: push eax
+  loc_005FEB43: push edx
+  loc_005FEB44: call ebx
+  loc_005FEB46: sub esp, 00000010h
+  loc_005FEB49: mov edi, eax
+  loc_005FEB4B: mov edx, esp
+  loc_005FEB4D: mov eax, 0000000Ah
+  loc_005FEB52: mov ecx, [edi]
+  loc_005FEB54: push 00447E0Ch ; "dd/Mmm/yyyy"
+  loc_005FEB59: mov [edx], eax
+  loc_005FEB5B: mov eax, var_20
+  loc_005FEB5E: push edi
+  loc_005FEB5F: mov [edx+00000004h], eax
+  loc_005FEB62: mov eax, 80020004h
+  loc_005FEB67: mov [edx+00000008h], eax
+  loc_005FEB6A: mov eax, var_18
+  loc_005FEB6D: mov [edx+0000000Ch], eax
+  loc_005FEB70: call [ecx+000001ECh]
+  loc_005FEB76: test eax, eax
+  loc_005FEB78: fnclex
+  loc_005FEB7A: jge 005FEB8Eh
+  loc_005FEB7C: push 000001ECh
+  loc_005FEB81: push 00446E04h
+  loc_005FEB86: push edi
+  loc_005FEB87: push eax
+  loc_005FEB88: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FEB8E: mov edi, [0040142Ch] ; __vbaFreeObj
+  loc_005FEB94: lea ecx, var_14
+  loc_005FEB97: call edi
+  loc_005FEB99: mov ecx, [esi]
+  loc_005FEB9B: push esi
+  loc_005FEB9C: call [ecx+00000314h]
+  loc_005FEBA2: lea edx, var_14
+  loc_005FEBA5: push eax
+  loc_005FEBA6: push edx
+  loc_005FEBA7: call ebx
+  loc_005FEBA9: sub esp, 00000010h
+  loc_005FEBAC: mov ecx, 0000000Ah
+  loc_005FEBB1: mov ebx, esp
+  loc_005FEBB3: mov esi, eax
+  loc_005FEBB5: mov eax, 80020004h
+  loc_005FEBBA: push 0043C9CCh ; "Dddd Mmm dd, yyyy"
+  loc_005FEBBF: mov edx, [esi]
+  loc_005FEBC1: mov [ebx], ecx
+  loc_005FEBC3: mov ecx, var_20
+  loc_005FEBC6: push esi
+  loc_005FEBC7: mov [ebx+00000004h], ecx
+  loc_005FEBCA: mov [ebx+00000008h], eax
+  loc_005FEBCD: mov eax, var_18
+  loc_005FEBD0: mov [ebx+0000000Ch], eax
+  loc_005FEBD3: call [edx+000001ECh]
+  loc_005FEBD9: test eax, eax
+  loc_005FEBDB: fnclex
+  loc_005FEBDD: jge 005FEBF1h
+  loc_005FEBDF: push 000001ECh
+  loc_005FEBE4: push 00446E04h
+  loc_005FEBE9: push esi
+  loc_005FEBEA: push eax
+  loc_005FEBEB: call [004010CCh] ; __vbaHresultCheckObj
+  loc_005FEBF1: lea ecx, var_14
+  loc_005FEBF4: call edi
+  loc_005FEBF6: push 005FEC08h
+  loc_005FEBFB: jmp 005FEC07h
+  loc_005FEBFD: lea ecx, var_14
+  loc_005FEC00: call [0040142Ch] ; __vbaFreeObj
+  loc_005FEC06: ret
+  loc_005FEC07: ret
+  loc_005FEC08: mov ecx, var_10
+  loc_005FEC0B: pop edi
+  loc_005FEC0C: pop esi
+  loc_005FEC0D: xor eax, eax
+  loc_005FEC0F: mov fs:[00000000h], ecx
+  loc_005FEC16: pop ebx
+  loc_005FEC17: mov esp, ebp
+  loc_005FEC19: pop ebp
+  loc_005FEC1A: retn 0004h
+End Sub
